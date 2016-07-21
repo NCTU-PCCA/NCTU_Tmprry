@@ -1,2 +1,3 @@
-# Tmprry
-7122
+# NCTU_Tmprry
+
+ACM-ICPC Codebook
