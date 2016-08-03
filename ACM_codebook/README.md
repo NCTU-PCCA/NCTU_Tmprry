@@ -1,12 +1,12 @@
 NCTU_Tmprry Codebook 清單
 
-##Basic
+## Basic
 - .vimrc
 - Biginteger
 - Fraction
 - 隨機函式
 - Incstack
-##Mathmatics
+## Mathmatics
 - 卡特蘭數
 - 線性質數篩法
 - 中國剩餘定理
@@ -23,7 +23,7 @@ NCTU_Tmprry Codebook 清單
 - Eratosthenes 篩法
 - 高斯消去法
 - π=2+2/3+2/3×2/5+2/3×2/5×3/7+2/3×2/5×3/7×4/9
-##Geometry
+## Geometry
 - 2D 幾何模板
 - 3D 幾何模板
 - 2D/3D 凸包
@@ -32,13 +32,13 @@ NCTU_Tmprry Codebook 清單
 - 正 N 邊形面積公式
 - 球面積體積
 - Vonoroi Diagram
-##Flow (Pending Reorganization)
+## Flow (Pending Reorganization)
 - 最大流
 - 最小費用流
 - Dinic
 - ISAP
 - Mincut - SW
-##Graph
+## Graph
 - 割點／橋
 - 最短路徑
 - SCC 強連通 Kosaraju / Tarjan
@@ -47,7 +47,7 @@ NCTU_Tmprry Codebook 清單
 - 最大獨立集
 - 匈牙利算法
 - 差分約束
-##Data-Structure
+## Data-Structure
 - 莫隊算法
 - Link Cut Tree
 - Splay Tree
@@ -56,7 +56,7 @@ NCTU_Tmprry Codebook 清單
 - BIT
 - KD-Tree
 - Disjoint set
-##String
+## String
 - Suffix Array
 - KMP
 - Z-Value
@@ -65,22 +65,22 @@ NCTU_Tmprry Codebook 清單
 - 後綴自動機
 - 最長迴文字串
 - Trie
-##Dark Code
+## Dark Code
 - 黑暗輸入優化
 - PBDS_http://footoredo.logdown.com/posts/278713/C-----black-magic--magic-pb_ds-library
-##Search
+## Search
 - IDA*
 - 模擬退火法
 - 2 SAT
-##Others
+## Others
 - 線性遞迴
 - 矩陣乘法
 - 次小生成樹
-##持久化
+## 持久化
 - 持久化線段樹
 - 持久化 Treap
 - 持久化並查集
-##Codebook(.tex)(.pdf)
+## Codebook(.tex)(.pdf)
 '''
 好 Codebook 參考
 
@@ -117,7 +117,7 @@ M_R PRIME 判斷
 POLLARD RHO 分解
 黑暗輸入優化
 LINK CUT TREE
-#pragma GCC optimize("O3")
+\#pragma GCC optimize("O3")
 __pbds     
 (參考資料 http://footoredo.logdown.com/posts/278713/C-----black-magic--magic-pb_ds-library)
 π=2+2/3+2/3×2/5+2/3×2/5×3/7+2/3×2/5×3/7×4/9  (好好保存 使其拿達到1000位UP)
