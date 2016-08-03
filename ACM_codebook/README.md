@@ -6,6 +6,7 @@ NCTU_Tmprry Codebook 清單
 - Fraction
 - 隨機函式
 - Incstack
+
 ## Mathmatics
 - 卡特蘭數
 - 線性質數篩法
@@ -23,6 +24,7 @@ NCTU_Tmprry Codebook 清單
 - Eratosthenes 篩法
 - 高斯消去法
 - π=2+2/3+2/3×2/5+2/3×2/5×3/7+2/3×2/5×3/7×4/9
+
 ## Geometry
 - 2D 幾何模板
 - 3D 幾何模板
@@ -32,12 +34,14 @@ NCTU_Tmprry Codebook 清單
 - 正 N 邊形面積公式
 - 球面積體積
 - Vonoroi Diagram
+
 ## Flow (Pending Reorganization)
 - 最大流
 - 最小費用流
 - Dinic
 - ISAP
 - Mincut - SW
+
 ## Graph
 - 割點／橋
 - 最短路徑
@@ -47,6 +51,7 @@ NCTU_Tmprry Codebook 清單
 - 最大獨立集
 - 匈牙利算法
 - 差分約束
+
 ## Data-Structure
 - 莫隊算法
 - Link Cut Tree
@@ -56,6 +61,7 @@ NCTU_Tmprry Codebook 清單
 - BIT
 - KD-Tree
 - Disjoint set
+
 ## String
 - Suffix Array
 - KMP
@@ -65,23 +71,28 @@ NCTU_Tmprry Codebook 清單
 - 後綴自動機
 - 最長迴文字串
 - Trie
+
 ## Dark Code
 - 黑暗輸入優化
 - PBDS_http://footoredo.logdown.com/posts/278713/C-----black-magic--magic-pb_ds-library
+
 ## Search
 - IDA*
 - 模擬退火法
 - 2 SAT
+
 ## Others
 - 線性遞迴
 - 矩陣乘法
 - 次小生成樹
+
 ## 持久化
 - 持久化線段樹
 - 持久化 Treap
 - 持久化並查集
+
 ## Codebook(.tex)(.pdf)
-'''
+```
 好 Codebook 參考
 
 	https://github.com/tzupengwang/PECaveros/tree/master/codebook/flow
@@ -90,10 +101,10 @@ https://github.com/search?utf8=%E2%9C%93&q=codebook
 https://github.com/t3nsor/codebook
 https://github.com/bobogei81123/bcw_codebook
 https://github.com/yasith/ACM-Codebook/blob/master/Codebook.pdf
-'''
+```
 
 #################################################
-'''
+```
 Bridge Detection
 Articulation Point Detection
 Minimum-Cost Maximum-Flow Algorithm
@@ -173,4 +184,4 @@ __pbds
 	ISAP
 	https://github.com/tzupengwang/PECaveros/tree/master/codebook/flow
 	KDtree
-'''
+```
