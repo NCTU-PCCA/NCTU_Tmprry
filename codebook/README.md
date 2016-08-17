@@ -73,7 +73,7 @@ NCTU_Tmprry Codebook 清單
 - Trie
 
 ## Dark Code
-- 黑暗輸入優化
+- I/O optimization 黑暗輸入優化 O
 - PBDS_http://footoredo.logdown.com/posts/278713/C-----black-magic--magic-pb_ds-library
 
 ## Search
