@@ -2,7 +2,7 @@ NCTU_Tmprry Codebook 清單
 
 ## Basic
 - .vimrc
-- Biginteger
+- Biginteger O
 - Fraction
 - 隨機函式
 - Incstack
@@ -11,7 +11,7 @@ NCTU_Tmprry Codebook 清單
 - 卡特蘭數
 - 線性質數篩法
 - 中國剩餘定理
-- Miller Rabin 質數測試法
+- Miller Rabin 質數測試法 O
 - 模逆元
 - Pollard-Rho 因數分解法
 - FFT / NTT
@@ -64,7 +64,7 @@ NCTU_Tmprry Codebook 清單
 
 ## String
 - Suffix Array
-- KMP
+- KMP O
 - Z-Value
 - AC 自動機
 - Hash Function 用質數（？）
