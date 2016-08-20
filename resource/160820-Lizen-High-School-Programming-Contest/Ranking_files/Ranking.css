@@ -1,0 +1,1178 @@
+body {
+    /* FIXME: I'd suggest putting a 0.75em font-size */
+    font: 1em/1.5em sans-serif;
+
+    color: black;
+
+    background-color: #F6F6F6;
+    background-image: -webkit-linear-gradient(#FFFFFF, #EDEDED);
+    background-image:    -moz-linear-gradient(#FFFFFF, #EDEDED);
+    background-image:      -o-linear-gradient(#FFFFFF, #EDEDED);
+    background-image:         linear-gradient(#FFFFFF, #EDEDED);
+    background-attachment: fixed;
+
+    margin: 0;
+}
+
+/* TODO: the following two might be omitted */
+
+td {
+    padding: 0;
+}
+
+a {
+    outline: none;
+}
+
+abbr {
+    border-bottom: 1px dotted black;
+}
+
+/******************************************************************************\
+|                                                                              |
+|                                   Page layout                                |
+|                                   -----------                                |
+\******************************************************************************/
+
+
+#LogoPanel {
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    width: 200px;
+}
+
+#UpperPanel {
+    position: absolute;
+    top: 0;
+    left: 248px;
+    right: 0;
+    height: 3em;
+    border-width: 0 0 2px 2px;
+    border-style: solid;
+    border-color: #FAFAFA;
+    border-radius: 0 0 0 10px;
+    background-color: #EAEAEC;
+    box-shadow: 0 0 2px 0 gray;
+    z-index: 100;
+}
+
+#SidePanel {
+    position: absolute;
+    left: 0;
+    top: 208px;
+    bottom: 24px;
+    width: 220px;
+    border-width: 2px 2px 2px 0;
+    border-style: solid;
+    border-color: #FAFAFA;
+    border-radius: 0 10px 10px 0;
+    background-color: #EAEAEC;
+    box-shadow: 0 0 2px 0 gray;
+    z-index: 8;
+    padding: 0;
+}
+
+#InnerFrame {
+    position: absolute;
+    top: 3em;
+    left: 220px;
+    right: 0;
+    bottom: 0;
+    margin: 2px 0 0 2px;
+    padding: 0 3em;
+    overflow-y: scroll;
+}
+
+
+/******************************************************************************\
+|                                                                              |
+|                                    Time View                                 |
+|                                    ---------                                 |
+\******************************************************************************/
+
+
+#TimeView {
+    position: absolute;
+    top: 208px;
+    left: 0;
+    width: 220px;
+    z-index: 10;
+    text-align: center;
+}
+
+#TimeView_selector {
+    display: inline-block;
+    height: 28px;
+    padding: 0;
+    z-index: 10;
+    margin: 4px;
+    overflow: hidden;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+         -o-user-select: none;
+            user-select: none;
+}
+
+/* #TimeView:not(.post_cont) #TimeView_selector:hover */
+#TimeView.pre_cont #TimeView_selector:hover,
+#TimeView.cont #TimeView_selector:hover,
+#TimeView_selector.open {
+    margin: 2px;
+    background-color: #EAEAEC;
+    border: 2px solid #FAFAFA;
+    border-radius: 4px;
+    box-shadow: 0 0 2px 0 gray;
+}
+
+#TimeView_selector.open {
+    height: auto;
+}
+
+#TimeView_time {
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    line-height: 28px;
+    font-size: 24px;
+    margin: 0 2px 0 16px;
+}
+
+#TimeView_expand {
+    display: inline-block;
+    position: relative;
+    width: 8px;
+    height: 28px;
+    vertical-align: top;
+    cursor: pointer;
+    margin: 0 4px 0 2px;
+}
+
+#TimeView_selector .caret {
+    position: absolute;
+    top: 12px;
+    width: 0;
+    height: 0;
+    vertical-align: middle;
+    border-top: 6px solid #AAAAAA;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+    border-bottom: 0;
+}
+
+#TimeView_selector:hover .caret {
+    border-top-color: #000000;
+}
+
+#TimeView_selector.open .caret {
+    top: 10px;
+    border-top: 0;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+    border-bottom: 6px solid #000000;
+}
+
+#TimeView.post_cont #TimeView_time {
+    margin-right: 16px;
+}
+
+#TimeView.post_cont #TimeView_expand {
+    display: none;
+}
+
+#TimeView_selector_elapsed,
+#TimeView_selector_remaining,
+#TimeView_selector_current {
+    padding: 2px 4px;
+    font-size: 0.875em;
+    line-height: 1.4em;
+    color: #444444;
+    cursor: pointer;
+}
+
+#TimeView.pre_cont #TimeView_selector_elapsed,
+#TimeView.post_cont #TimeView_selector_elapsed,
+#TimeView.post_cont #TimeView_selector_remaining {
+    display: none;
+}
+
+#TimeView.elapsed #TimeView_selector_elapsed,
+#TimeView.remaining #TimeView_selector_remaining,
+#TimeView.current #TimeView_selector_current {
+    background-color: #F2F2F3;
+    color: #000000;
+}
+
+#TimeView_selector_elapsed:hover,
+#TimeView_selector_remaining:hover,
+#TimeView_selector_current:hover {
+    background-color: #FAFAFA !important;
+    color: #000000;
+}
+
+#TimeView + #SidePanel {
+    top: 256px;
+}
+
+#TimeView.pre_cont + #SidePanel,
+#TimeView.cont + #SidePanel {
+    top: 280px;
+}
+
+
+/******************************************************************************\
+|                                                                              |
+|                                   Right panel                                |
+|                                   -----------                                |
+\******************************************************************************/
+
+
+#Overview {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+
+/******************************************************************************\
+|                                                                              |
+|                                   Team search                                |
+|                                   -----------                                |
+\******************************************************************************/
+
+
+#TeamSearch_input {
+    position: absolute;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    top: 0;
+    left: 250px;
+    height: 1.5em;
+    margin: 0.5em;
+    border: 0;
+    padding: 0.25em;
+    z-index: 401;
+    border-radius: 0.5em;
+    /* Needed to override WebKit's default font size for inputs */
+    font: inherit;
+    background-color: #FFFFFF;
+    outline: 0;
+}
+
+#TeamSearch_bg {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 400;
+    background-color: rgba(0,0,0,0.5);
+    /* the following two lines are for IE */
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#80000000, endColorstr=#80000000)";
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#80000000, endColorstr=#80000000);
+}
+
+#TeamSearch_bg.open {
+    display: block;
+}
+
+#TeamSearch {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 940px;
+    margin: 64px auto 48px;
+    border-radius: 12px;
+    background-color: white;
+}
+
+#TeamSearch_close {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+#TeamSearch_body {
+    position: absolute;
+    top: 14px; /* 20px - 0.5em at a 12px font-size */
+    top: -webkit-calc(20px - 0.5em);
+    top:    -moz-calc(20px - 0.5em);
+    top:         calc(20px - 0.5em);
+    left: 10px;
+    right: 10px;
+    bottom: 14px; /* 20px - 0.5em at a 12px font-size */
+    bottom: -webkit-calc(20px - 0.5em);
+    bottom:    -moz-calc(20px - 0.5em);
+    bottom:         calc(20px - 0.5em);
+    overflow-y: auto;
+}
+
+#TeamSearch_body div.item {
+    float: left;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 25%;
+    height: 3em;
+    padding: 0;
+    border: 0 solid white;
+    border-width: 0.5em 10px;
+    background-color: #DDDDDD;
+
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+         -o-user-select: none;
+            user-select: none;
+}
+
+#TeamSearch_body div.item.hidden {
+    display: none;
+}
+
+#TeamSearch_body div.item label {
+    display: block;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    padding: 0.25em 5px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+#TeamSearch_body div.item input {
+    margin: auto 1px auto 0;
+    vertical-align: middle;
+}
+
+#TeamSearch_body div.item img {
+    display: inline-block;
+    max-height: 20px;
+    vertical-align: top;
+    margin-top: -1px; /* (1.5em - 20px) / 2 at a 12px font-size */
+    margin-top: -webkit-calc(0.75em - 10px);
+    margin-top:    -moz-calc(0.75em - 10px);
+    margin-top:         calc(0.75em - 10px);
+}
+
+
+/******************************************************************************\
+|                                                                              |
+|                                   Scoreboard                                 |
+|                                   ----------                                 |
+\******************************************************************************/
+
+
+#Scoreboard {
+    width: 100%;
+    table-layout: fixed;
+    margin: 3em 0;
+}
+
+#Scoreboard_cols col.sel {
+    width: 2em;
+}
+
+#Scoreboard_cols col.rank {
+    width: 48px;
+}
+
+#Scoreboard_cols col.team {
+    /* This is the minimum width needed to contain a flag */
+    width: 42px;
+    /* These rules set the horizontal padding to the same value as the
+       vertical one (in presence of a flag with a 2:1 ratio) */
+    width: -webkit-calc(2em + 20px);
+    width:    -moz-calc(2em + 20px);
+    width:         calc(2em + 20px);
+}
+
+#Scoreboard_head tr {
+    height: 2.5em;
+}
+
+#Scoreboard_body tr {
+    height: 2em;
+}
+
+#Scoreboard_head tr th {
+    background-color: #ECECEF;
+    border: 1px #D0D0D2 solid;
+    border-radius: 4px;
+    box-shadow: 0 0 2px 0 #D2D2D4 inset;
+    height: 24px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+#Scoreboard_body tr td.team {
+    vertical-align: middle;
+}
+
+#Scoreboard_body tr td.team img {
+    display: block;
+    max-width: 40px;
+    max-height: 20px;
+    margin: 0 auto;
+    box-shadow: 0 0 2px 0 gray;
+}
+
+#Scoreboard_head tr th,
+#Scoreboard_body tr td {
+    text-align: center;
+}
+
+#Scoreboard_body tr td.f_name,
+#Scoreboard_body tr td.l_name {
+    text-align: left;
+    padding: 0 0.5em;
+    cursor: pointer;
+}
+
+#Scoreboard_head tr th.sel {
+    background-image: url('img/tick_black.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#Scoreboard_head tr th.score {
+    cursor: pointer;
+}
+
+#Scoreboard_body tr:hover td.f_name,
+#Scoreboard_body tr:hover td.l_name,
+#Scoreboard_body tr:hover td.team {
+    background-color: rgba(200,200,200,0.35);
+    border-radius: 5px;
+}
+
+#Scoreboard_body tr.selected td.f_name,
+#Scoreboard_body tr.selected td.l_name {
+    font-weight: bold;
+}
+
+/* What follows is the CSS needed to manage the "checkboxes" in the Scoreboard,
+   used to select users. We're simulating checkboxes using table cells, so we
+   have to define their appearence in "normal" status as well as during user
+   interaction. We did this so we can be more flexible on the style: we need
+   to be able to set the background color of the checkbox and to make them a
+   little bigger so that the color can be seen better.
+
+   We use eight colors, taken from the Tango Palette:
+   http://tango.freedesktop.org/Tango_Icon_Theme_Guidelines#Color_Palette
+ */
+
+#Scoreboard_body tr td.sel {
+    background: url('img/tick_black.png') no-repeat center transparent;
+    opacity: 0;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+         -o-user-select: none;
+            user-select: none;
+}
+
+#Scoreboard_body tr td.sel:hover {
+    opacity: 0.3;
+}
+
+#Scoreboard_body tr td.sel:active {
+    opacity: 0.5;
+}
+
+#Scoreboard_body tr.selected td.sel {
+    background: url('img/tick_white.png') no-repeat center transparent;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 4px;
+    opacity: 1;
+}
+
+/* Color 1: Blue */
+
+#Scoreboard_body tr.color1 td.sel {
+    background-color: rgb(52,101,164);
+}
+
+#Scoreboard_body tr.color1 td.sel:hover {
+    background-color: rgb(32,74,135);
+}
+
+#Scoreboard_body tr.color1 td.sel:active {
+    background-color: rgb(26,59,108);
+}
+
+/* Color 2: Butter */
+
+#Scoreboard_body tr.color2 td.sel {
+    background-color: rgb(237,212,0);
+}
+
+#Scoreboard_body tr.color2 td.sel:hover {
+    background-color: rgb(196,160,0);
+}
+
+#Scoreboard_body tr.color2 td.sel:active {
+    background-color: rgb(157,128,0);
+}
+
+/* Color 3: Red */
+
+#Scoreboard_body tr.color3 td.sel {
+    background-color: rgb(204,0,0);
+}
+
+#Scoreboard_body tr.color3 td.sel:hover {
+    background-color: rgb(164,0,0);
+}
+
+#Scoreboard_body tr.color3 td.sel:active {
+    background-color: rgb(131,0,0);
+}
+
+/* Color 4: Chameleon */
+
+#Scoreboard_body tr.color4 td.sel {
+    background-color: rgb(115,210,22);
+}
+
+#Scoreboard_body tr.color4 td.sel:hover {
+    background-color: rgb(78,154,6);
+}
+
+#Scoreboard_body tr.color4 td.sel:active {
+    background-color: rgb(62,123,5);
+}
+
+/* Color 5: Orange */
+
+#Scoreboard_body tr.color5 td.sel {
+    background-color: rgb(245,121,0);
+}
+
+#Scoreboard_body tr.color5 td.sel:hover {
+    background-color: rgb(206,92,0);
+}
+
+#Scoreboard_body tr.color5 td.sel:active {
+    background-color: rgb(165,74,0);
+}
+
+/* Color 6: Plum */
+
+#Scoreboard_body tr.color6 td.sel {
+    background-color: rgb(117,80,123);
+}
+
+#Scoreboard_body tr.color6 td.sel:hover {
+    background-color: rgb(92,53,102);
+}
+
+#Scoreboard_body tr.color6 td.sel:active {
+    background-color: rgb(74,42,82);
+}
+
+/* Color 7: Aluminium */
+
+#Scoreboard_body tr.color7 td.sel {
+    background-color: rgb(136,138,133);
+}
+
+#Scoreboard_body tr.color7 td.sel:hover {
+    background-color: rgb(85,87,83);
+}
+
+#Scoreboard_body tr.color7 td.sel:active {
+    background-color: rgb(68,70,66);
+}
+
+/* Color 8: Chocolate */
+
+#Scoreboard_body tr.color8 td.sel {
+    background-color: rgb(193,125,17);
+}
+
+#Scoreboard_body tr.color8 td.sel:hover {
+    background-color: rgb(143,89,2);
+}
+
+#Scoreboard_body tr.color8 td.sel:active {
+    background-color: rgb(114,71,2);
+}
+
+/* This animation stuff is quite huge: every brosers implements it using its
+   own prefix and we have to handle them all. In particular: for each animation
+   we have to set three properties on a specific selector and we have to define
+   a set of keyframes. We use the unprefixed rules and the following prefixes:
+    -webkit-...  -moz-...  -o-...
+
+   In addition, we have to cover some particular cases. A row that's being
+   animated can seleted or unselected. Thus, we have the following cases:
+    ("selected_")? "score_" ("up"|"down")
+
+   Just to give some numbers: we have 16 sets of keyframes in total.
+ */
+
+#Scoreboard_body tr.score_up td.rank {
+    border-radius: 5px;
+    -webkit-animation-duration: 5s;
+       -moz-animation-duration: 5s;
+         -o-animation-duration: 5s;
+            animation-duration: 5s;
+    -webkit-animation-name: score_up;
+       -moz-animation-name: score_up;
+         -o-animation-name: score_up;
+            animation-name: score_up;
+    -webkit-animation-timing-function: ease-in;
+       -moz-animation-timing-function: ease-in;
+         -o-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+}
+
+#Scoreboard_body tr.score_down td.rank {
+    border-radius: 5px;
+    -webkit-animation-duration: 5s;
+       -moz-animation-duration: 5s;
+         -o-animation-duration: 5s;
+            animation-duration: 5s;
+    -webkit-animation-name: score_down;
+       -moz-animation-name: score_down;
+         -o-animation-name: score_down;
+            animation-name: score_down;
+    -webkit-animation-timing-function: ease-in;
+       -moz-animation-timing-function: ease-in;
+         -o-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+}
+
+@-webkit-keyframes score_up {
+    from {background-color: rgba(138,226,52,0);}
+    10% {background-color: rgba(138,226,52,0.6);}
+    to {background-color: rgba(138,226,52,0);}
+}
+
+@-moz-keyframes score_up {
+    from {background-color: rgba(138,226,52,0);}
+    10% {background-color: rgba(138,226,52,0.6);}
+    to {background-color: rgba(138,226,52,0);}
+}
+
+@-o-keyframes score_up {
+    from {background-color: rgba(138,226,52,0);}
+    10% {background-color: rgba(138,226,52,0.6);}
+    to {background-color: rgba(138,226,52,0);}
+}
+
+@keyframes score_up {
+    from {background-color: rgba(138,226,52,0);}
+    10% {background-color: rgba(138,226,52,0.6);}
+    to {background-color: rgba(138,226,52,0);}
+}
+
+@-webkit-keyframes score_down {
+    from {background-color: rgba(239,41,41,0);}
+    10% {background-color: rgba(239,41,41,0.6);}
+    to {background-color: rgba(239,41,41,0);}
+}
+
+@-moz-keyframes score_down {
+    from {background-color: rgba(239,41,41,0);}
+    10% {background-color: rgba(239,41,41,0.6);}
+    to {background-color: rgba(239,41,41,0);}
+}
+
+@-o-keyframes score_down {
+    from {background-color: rgba(239,41,41,0);}
+    10% {background-color: rgba(239,41,41,0.6);}
+    to {background-color: rgba(239,41,41,0);}
+}
+
+@keyframes score_down {
+    from {background-color: rgba(239,41,41,0);}
+    10% {background-color: rgba(239,41,41,0.6);}
+    to {background-color: rgba(239,41,41,0);}
+}
+
+#Scoreboard_body tr.selected.score_up td.rank {
+    border-radius: 5px;
+    -webkit-animation-duration: 10s;
+       -moz-animation-duration: 10s;
+         -o-animation-duration: 10s;
+            animation-duration: 10s;
+    -webkit-animation-name: selected_score_up;
+       -moz-animation-name: selected_score_up;
+         -o-animation-name: selected_score_up;
+            animation-name: selected_score_up;
+    -webkit-animation-timing-function: ease-in;
+       -moz-animation-timing-function: ease-in;
+         -o-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+}
+
+#Scoreboard_body tr.selected.score_down td.rank {
+    border-radius: 5px;
+    -webkit-animation-duration: 10s;
+       -moz-animation-duration: 10s;
+         -o-animation-duration: 10s;
+            animation-duration: 10s;
+    -webkit-animation-name: selected_score_down;
+       -moz-animation-name: selected_score_down;
+         -o-animation-name: selected_score_down;
+            animation-name: selected_score_down;
+    -webkit-animation-timing-function: ease-in;
+       -moz-animation-timing-function: ease-in;
+         -o-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+}
+
+@-webkit-keyframes selected_score_up {
+    from {background-color: rgba(138,226,52,0);}
+    5% {background-color: rgba(138,226,52,1);}
+    to {background-color: rgba(138,226,52,0);}
+}
+
+@-moz-keyframes selected_score_up {
+    from {background-color: rgba(138,226,52,0);}
+    5% {background-color: rgba(138,226,52,1);}
+    to {background-color: rgba(138,226,52,0);}
+}
+
+@-o-keyframes selected_score_up {
+    from {background-color: rgba(138,226,52,0);}
+    5% {background-color: rgba(138,226,52,1);}
+    to {background-color: rgba(138,226,52,0);}
+}
+
+@keyframes selected_score_up {
+    from {background-color: rgba(138,226,52,0);}
+    5% {background-color: rgba(138,226,52,1);}
+    to {background-color: rgba(138,226,52,0);}
+}
+
+@-webkit-keyframes selected_score_down {
+    from {background-color: rgba(239,41,41,0);}
+    5% {background-color: rgba(239,41,41,1);}
+    to {background-color: rgba(239,41,41,0);}
+}
+
+@-moz-keyframes selected_score_down {
+    from {background-color: rgba(239,41,41,0);}
+    5% {background-color: rgba(239,41,41,1);}
+    to {background-color: rgba(239,41,41,0);}
+}
+
+@-o-keyframes selected_score_down {
+    from {background-color: rgba(239,41,41,0);}
+    5% {background-color: rgba(239,41,41,1);}
+    to {background-color: rgba(239,41,41,0);}
+}
+
+@keyframes selected_score_down {
+    from {background-color: rgba(239,41,41,0);}
+    5% {background-color: rgba(239,41,41,1);}
+    to {background-color: rgba(239,41,41,0);}
+}
+
+/*
+   The animation stuff ends here.
+ */
+
+#Scoreboard_body tr td.score {
+    opacity: 0.75;
+    border-radius: 5px;
+}
+
+#Scoreboard_body tr td.score.sort_key {
+    border: 1px solid #777777;
+    box-shadow: 0 0 1px white inset;
+}
+
+#Scoreboard_body tr:hover td.score,
+#Scoreboard_body tr.selected td.score,
+#Scoreboard_body tr td.score.sort_key {
+    opacity: 1;
+}
+
+.score_0 {
+    background-color: #F40000;
+    /*background-image: linear-gradient(rgb(204, 0, 0), rgb(244, 0, 0));*/
+}
+
+.score_0_10 {
+    background-color: #EB1D00;
+    /*background-image: linear-gradient(rgb(210, 38, 0), rgb(235, 29, 0));*/
+}
+
+.score_10_20 {
+    background-color: #E23A00;
+    /*background-image: linear-gradient(rgb(216, 77, 0), rgb(226, 58, 0));*/
+}
+
+.score_20_30 {
+    background-color: #D95700;
+    /*background-image: linear-gradient(rgb(222, 115, 0), rgb(217, 87, 0));*/
+}
+
+.score_30_40 {
+    background-color: #D17400;
+    /*background-image: linear-gradient(rgb(228, 154, 0), rgb(209, 116, 0));*/
+}
+
+.score_40_50 {
+    background-color: #C89100;
+    /*background-image: linear-gradient(rgb(234, 192, 0), rgb(200, 145, 0));*/
+}
+
+.score_50_60 {
+    background-color: #B99F00;
+    /*background-image: linear-gradient(rgb(225, 211, 2), rgb(185, 159, 0));*/
+}
+
+.score_60_70 {
+    background-color: #A39E01;
+    /*background-image: linear-gradient(rgb(203, 211, 6), rgb(163, 158, 1));*/
+}
+
+.score_70_80 {
+    background-color: #8E9D02;
+    /*background-image: linear-gradient(rgb(181, 211, 10), rgb(142, 157, 2));*/
+}
+
+.score_80_90 {
+    background-color: #789C03;
+    /*background-image: linear-gradient(rgb(159, 210, 14), rgb(120, 156, 3));*/
+}
+
+.score_90_100 {
+    background-color: #639B04;
+    /*background-image: linear-gradient(rgb(137, 210, 18), rgb(99, 155, 4));*/
+}
+
+.score_100 {
+    background-color: #4E9A05;
+    /*background-image: linear-gradient(rgb(115, 210, 22), rgb(78, 154, 5));*/
+}
+
+
+/******************************************************************************\
+|                                                                              |
+|                                   User panel                                 |
+|                                   ----------                                 |
+\******************************************************************************/
+
+
+#UserDetail_bg {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 500;
+    background-color: rgba(0,0,0,0.5);
+    overflow-y: scroll;
+    /* the following two lines are for IE */
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#80000000, endColorstr=#80000000)";
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#80000000, endColorstr=#80000000);
+}
+
+#UserDetail_bg.open {
+    display: block;
+}
+
+#UserDetail {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 920px;
+    margin: 48px auto;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: white;
+}
+
+#UserDetail_close {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+#UserDetail_header {
+    position: relative;
+    min-height: 242px;
+}
+
+#UserDetail_f_name,
+#UserDetail_l_name,
+#UserDetail_team,
+#UserDetail_flag {
+    position: absolute;
+    right: 470px;
+    font-size: 2em;
+    line-height: 1.5em;
+}
+
+#UserDetail_f_name {
+    top: 0;
+}
+
+#UserDetail_l_name {
+    top: 1.5em;
+}
+
+#UserDetail_team {
+    bottom: 100px;
+}
+
+#UserDetail_flag {
+    bottom: 0;
+}
+
+#UserDetail_face {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 160px;
+    max-height: 240px;
+}
+
+#UserDetail_flag {
+    margin: -1px;
+    border: 1px solid gray;
+}
+
+#UserDetail_flag.hidden {
+    display: none;
+}
+
+#UserDetail_navigator {
+    width: 450px;
+    margin-left: 470px;
+}
+
+#UserDetail_navigator table {
+    width: 100%;
+    table-layout: fixed;
+    border-spacing: 2px;
+}
+
+#UserDetail_navigator tr {
+    height: 22px;
+}
+
+#UserDetail_navigator col.name {
+    width: 60%;
+}
+
+#UserDetail_navigator col.score,
+#UserDetail_navigator col.rank {
+    width: 12%;
+}
+
+#UserDetail_navigator col.show {
+    width: 14%;
+}
+
+#UserDetail_navigator tr td.score,
+#UserDetail_navigator tr td.rank {
+    padding-left: 4px;
+}
+
+#UserDetail_navigator tbody tr td.btn {
+    text-align: center;
+    border: 1px solid #999999;
+    box-shadow: 0 0 2px gray;
+    background-color: #EEEEEE;
+    border-radius: 3px;
+    cursor: pointer;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+         -o-user-select: none;
+            user-select: none;
+}
+
+#UserDetail_navigator tbody tr td.btn:hover {
+    background-color: #DDDDDD;
+}
+
+#UserDetail_navigator tbody tr td.btn:active {
+    background-color: #CCCCCC;
+}
+
+#UserDetail_navigator tbody tr.active td.btn {
+    background-color: #EEEEEE;
+    opacity: 0.4;
+    cursor: default;
+    /* the following two lines are for IE */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+    filter: alpha(opacity=40);
+}
+
+#UserDetail_navigator tr.global {
+    background-color: #DDDDDD;
+}
+
+#UserDetail_navigator tr.contest {
+    background-color: #EEEEEE;
+}
+
+#UserDetail_navigator tr.task {
+    background-color: #FFFFFF;
+}
+
+#UserDetail_navigator tr.global td.name {
+    padding-left: 5px;
+}
+
+#UserDetail_navigator tr.contest td.name {
+    padding-left: 25px;
+}
+
+#UserDetail_navigator tr.task td.name {
+    padding-left: 45px;
+}
+
+#UserDetail_title {
+    margin-top: 24px;
+    font-size: 2em;
+    line-height: 1.5em;
+    text-align: center;
+}
+
+#UserDetail_charts {
+    margin-top: 24px;
+    width: 100%;
+}
+
+#UserDetail_submissions {
+    margin-top: 24px;
+    width: 100%;
+}
+
+#UserDetail_submissions:empty {
+    margin-top: 0;
+}
+
+#UserDetail_submissions table {
+    width: 100%;
+    table-layout: fixed;
+}
+
+#UserDetail_submissions td {
+    height: 22px;
+    padding-left: 4px;
+}
+
+#UserDetail_submissions thead {
+    background-color: #DDDDDD;
+}
+
+#UserDetail_submissions tbody tr:nth-child(even) {
+    background-color: #EEEEEE;
+}
+
+#UserDetail_submissions tbody tr:nth-child(odd) {
+    background-color: #F8F8F8;
+}
+
+#UserDetail_submissions tbody td[colspan] {
+    text-align: center;
+    font-style: italic;
+}
+
+
+/* Style for the network status indicator */
+
+#ConnectionStatus_box {
+    display: inline-block;
+    position: relative;
+    float: right;
+    margin: 0.5em;
+    text-align: right;
+    z-index: 2;
+}
+
+#ConnectionStatus_label {
+    display: inline-block;
+    position: relative;
+    height: 1.5em;
+    padding: 0.25em 20px;
+    margin: -1px 0;
+    z-index: 2;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 4px;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+         -o-user-select: none;
+            user-select: none;
+}
+
+#ConnectionStatus_box:hover #ConnectionStatus_label {
+    border-bottom-width: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+#ConnectionStatus_text {
+    display: none;
+    position: absolute;
+    top: 2em;
+    right: 0;
+    width: 240px;
+    padding: 0.5em;
+    margin-top: -1px;
+    z-index: 1;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 4px 0 4px 4px;
+}
+
+#ConnectionStatus_box:hover #ConnectionStatus_text,
+#ConnectionStatus_text:hover {
+    display: block;
+}
+
+#ConnectionStatus_box[data-status="connected"] #ConnectionStatus_label,
+#ConnectionStatus_box[data-status="connected"] #ConnectionStatus_text {
+    background-color: white;
+    color: green;
+    border-color: green;
+}
+
+#ConnectionStatus_box[data-status="reconnecting"] #ConnectionStatus_label,
+#ConnectionStatus_box[data-status="reconnecting"] #ConnectionStatus_text {
+    background-color: yellow;
+    color: black;
+    border-color: black;
+}
+
+#ConnectionStatus_box[data-status="disconnected"] #ConnectionStatus_label,
+#ConnectionStatus_box[data-status="disconnected"] #ConnectionStatus_text,
+#ConnectionStatus_box[data-status="outdated"] #ConnectionStatus_label,
+#ConnectionStatus_box[data-status="outdated"] #ConnectionStatus_text,
+#ConnectionStatus_box[data-status="init_error"] #ConnectionStatus_label,
+#ConnectionStatus_box[data-status="init_error"] #ConnectionStatus_text {
+    background-color: red;
+    color: white;
+    border-color: red;
+}
+
+#ConnectionStatus_box a {
+    cursor: pointer;
+    text-decoration: underline;
+}
