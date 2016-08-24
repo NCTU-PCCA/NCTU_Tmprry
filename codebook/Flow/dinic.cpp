@@ -58,10 +58,10 @@ struct Dinic{	//O(VVE)
 
 	int maxflow(int s, int t){
 		this->s = s, this->t = t;
-		int flow=0;
+		int flow=0, mf;
 		while ( dinicBFS() ){
 			memset(cur,0,sizeof(cur));
-			flow += dinicDFS(s,INF);
+			while ( (mf=diniDFS(s,INF)) )flow+=mf;
 		}
 		return flow;
 	}
