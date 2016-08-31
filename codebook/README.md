@@ -38,7 +38,7 @@ NCTU_Tmprry Codebook 清單
 ## Flow (Pending Reorganization)
 - 最大流
 - 最小費用流
-- Dinic
+- Dinic O
 - ISAP
 - Mincut - SW
 
