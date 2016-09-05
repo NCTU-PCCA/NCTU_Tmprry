@@ -19,7 +19,7 @@ NCTU_Tmprry Codebook 清單
 - PI 3.1415926535897932
 - 三角函數公式
 - 旋轉矩陣 / 映射矩陣
-- 拓展歐幾里德定理 ax+by=gcd(a,b)
+- 拓展歐幾里德定理 ax+by=gcd(a,b) O
 - 常見不等式
 - Eratosthenes 篩法
 - 高斯消去法
