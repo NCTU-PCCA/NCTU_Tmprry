@@ -45,7 +45,7 @@ NCTU_Tmprry Codebook 清單
 ## Graph
 - 割點／橋
 - 最短路徑
-- SCC 強連通 Kosaraju / Tarjan
+- SCC 強連通 Kosaraju O / Tarjan
 - BCC 雙連通
 - 最大團
 - 最大獨立集
