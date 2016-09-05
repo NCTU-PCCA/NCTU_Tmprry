@@ -56,7 +56,7 @@ NCTU_Tmprry Codebook 清單
 - 莫隊算法
 - Link Cut Tree
 - Splay Tree
-- Treap(*, non-*)
+- Treap(*, non-*) O
 - 數鏈剖分
 - BIT
 - KD-Tree
