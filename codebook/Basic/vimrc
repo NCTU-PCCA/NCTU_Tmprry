@@ -1,0 +1,11 @@
+set nu
+set tabstop=4
+set softtabstop=4
+
+set autoindent
+set shiftwidth=4
+set cindent
+
+set smartindent
+
+nmap <F9> :! clear ; g++ -std=c++11 -static  -Wall -O2  % -o %.out; ./%.out 
