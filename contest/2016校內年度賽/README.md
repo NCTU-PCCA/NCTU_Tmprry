@@ -1,6 +1,6 @@
 # 交大年度賽 (2016/08/10)
 
-[題目](https://bitbucket.org/mzshieh/nctu-annual-2016/)官方題目連結  
+[官方題目連結](https://bitbucket.org/mzshieh/nctu-annual-2016/)  
 
 
 ## 題解
