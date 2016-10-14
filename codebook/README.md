@@ -14,14 +14,14 @@ NCTU_Tmprry Codebook 清單
 - Miller Rabin 質數測試法 O
 - 模逆元
 - Pollard-Rho 因數分解法
-- FFT / NTT
+- FFT / NTT O
 - 級數公式 / 積分公式
 - PI 3.1415926535897932
 - 三角函數公式
 - 旋轉矩陣 / 映射矩陣
 - 拓展歐幾里德定理 ax+by=gcd(a,b) O
 - 常見不等式
-- Eratosthenes 篩法
+- Eratosthenes 篩法 O
 - 高斯消去法
 - π=2+2/3+2/3×2/5+2/3×2/5×3/7+2/3×2/5×3/7×4/9
 
@@ -49,9 +49,9 @@ NCTU_Tmprry Codebook 清單
 - BCC 雙連通
 - 最大團
 - 最大獨立集
-- 匈牙利算法
+- 匈牙利算法 O
 - 差分約束
-- 一筆劃問題 O 
+- 一筆劃問題 O
 
 ## Data-Structure
 - 莫隊算法
@@ -61,7 +61,7 @@ NCTU_Tmprry Codebook 清單
 - 數鏈剖分
 - BIT
 - KD-Tree
-- Disjoint set
+- Disjoint set O
 
 ## String
 - Suffix Array
@@ -115,7 +115,7 @@ Catalan Numbers
 Chinese Remainder Theorem
 SuffixArray
 看毛片KMP
-Z 
+Z
 凸~~包2D 3D
 AC自動自動AC機
 IDA*
@@ -130,14 +130,14 @@ POLLARD RHO 分解
 黑暗輸入優化
 LINK CUT TREE
 \#pragma GCC optimize("O3")
-__pbds     
+__pbds
 (參考資料 http://footoredo.logdown.com/posts/278713/C-----black-magic--magic-pb_ds-library)
 π=2+2/3+2/3×2/5+2/3×2/5×3/7+2/3×2/5×3/7×4/9  (好好保存 使其拿達到1000位UP)
 
 	chtbst:
 	次小生成樹
 	Hash用質數
-	FFT ,NTT 
+	FFT ,NTT
 	級數公式 積分公式
 	PI 3.1415926535897932
 	2-SAT
@@ -152,7 +152,7 @@ __pbds
 	三角函數公式 正弦 餘弦
 	旋轉矩陣 鏡射矩陣
 	球面積 球體機公式
-	fina ax+by=gcd(a,b); 
+	fina ax+by=gcd(a,b);
 	中國剩餘定理
 	常見不等式
 	Miller_Rabin 質數 測試
@@ -174,11 +174,11 @@ __pbds
 	.Vimrc
 	Maximum_Clique
 	Codebook.tex
-	匈牙利算法					
+	匈牙利算法
 	Eratosthenes 篩法
 	拓展歐幾里德
-	高斯消去法	
-	BIT	
+	高斯消去法
+	BIT
 	Longest palindromic substring
 	構造隨機數
 	IncStack
