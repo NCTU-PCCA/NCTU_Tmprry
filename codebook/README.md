@@ -9,10 +9,10 @@ NCTU_Tmprry Codebook 清單
 
 ## Mathmatics
 - 卡特蘭數
-- 線性質數篩法
+- 線性質數篩法 O
 - 中國剩餘定理
 - Miller Rabin 質數測試法 O
-- 模逆元
+- 模逆元 O
 - Pollard-Rho 因數分解法
 - FFT / NTT O
 - 級數公式 / 積分公式
@@ -47,7 +47,7 @@ NCTU_Tmprry Codebook 清單
 - 最短路徑
 - SCC 強連通 Kosaraju O / Tarjan
 - BCC 雙連通
-- 最大團
+- 最大團 O
 - 最大獨立集
 - 匈牙利算法 O
 - 差分約束
@@ -66,7 +66,7 @@ NCTU_Tmprry Codebook 清單
 ## String
 - Suffix Array
 - KMP O
-- Z-Value
+- Z-Value O
 - AC 自動機
 - Hash Function 用質數（？）
 - 後綴自動機
