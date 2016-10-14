@@ -1,10 +1,10 @@
 NCTU_Tmprry Codebook 清單
 
 ## Basic
-- .vimrc
+- .vimrc O
 - Biginteger O
 - Fraction
-- 隨機函式
+- 隨機函式 O
 - Incstack
 
 ## Mathmatics
@@ -22,7 +22,7 @@ NCTU_Tmprry Codebook 清單
 - 拓展歐幾里德定理 ax+by=gcd(a,b) O
 - 常見不等式
 - Eratosthenes 篩法 O
-- 高斯消去法
+- 高斯消去法 O
 - π=2+2/3+2/3×2/5+2/3×2/5×3/7+2/3×2/5×3/7×4/9
 
 ## Geometry
@@ -45,7 +45,7 @@ NCTU_Tmprry Codebook 清單
 ## Graph
 - 割點／橋
 - 最短路徑
-- SCC 強連通 Kosaraju O / Tarjan
+- SCC 強連通 Kosaraju O / Tarjan O
 - BCC 雙連通
 - 最大團 O
 - 最大獨立集
@@ -67,7 +67,7 @@ NCTU_Tmprry Codebook 清單
 - Suffix Array
 - KMP O
 - Z-Value O
-- AC 自動機
+- AC 自動機 O
 - Hash Function 用質數（？）
 - 後綴自動機
 - 最長迴文字串
