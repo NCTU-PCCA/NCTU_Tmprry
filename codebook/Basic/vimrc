@@ -1,4 +1,4 @@
-set nu	"行號
+set nu	"行號"
 set tabstop=4
 set softtabstop=4
 
