@@ -27,3 +27,7 @@ struct Point {
 	T abs2() { return x*x+y*y; }
 	T abs() { return sqrt( abs2() ); }
 };
+typedef Point pdd;
+inline double abs2(pdd a){
+	return a.abs2();
+}
