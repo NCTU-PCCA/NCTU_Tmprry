@@ -1,5 +1,5 @@
 set nu	"行號"
-set tabstop=4
+set tabstop=4	"tab寬度"
 set softtabstop=4
 
 set autoindent
