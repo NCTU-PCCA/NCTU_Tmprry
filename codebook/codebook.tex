@@ -18,6 +18,11 @@
 \usepackage{amsmath}
 %\@ifpackageloaded{xeCJK}{}{\RequirePackage { xeCJK }}
 \usepackage[CheckSingle, CJKmath]{xeCJK}
+<<<<<<< HEAD
+=======
+%\usepackage{datetime}
+% \usepackage{CJKulem}
+>>>>>>> e58c4fe240035e0d650c3c7b258d2a75ec84faf7
 
 % \usepackage{CJKulem}
 %\usepackage[T1]{fontenc}
@@ -83,7 +88,7 @@ stringstyle=\itshape\color{Green4},
 \pagestyle{fancy}
 \fancyfoot{}
 %\fancyfoot[R]{\includegraphics[width=20pt]{ironwood.jpg}}
-\fancyhead[L]{NCTU Tmprry (2016/9/28)}
+\fancyhead[L]{NCTU Tmprry (\today)}
 \fancyhead[R]{\thepage}
 \renewcommand{\headrulewidth}{0.4pt}
 \renewcommand{\contentsname}{Contents}
@@ -98,8 +103,12 @@ stringstyle=\itshape\color{Green4},
 
 \subsection{vimrc}
 \lstinputlisting{Basic/vimrc}
+\subsection{Faster cin }
+\lstinputlisting{Basic/fastercin.cpp}
 \subsection{BigInt}
 \lstinputlisting{Basic/Bigint.cpp}
+\subsection{Random}
+\lstinputlisting{Basic/Random.cpp}
 
 %\newpage
 
@@ -113,18 +122,39 @@ stringstyle=\itshape\color{Green4},
 \lstinputlisting{Math/fft.cpp}
 \subsection{Hash}
 \lstinputlisting{Math/Hash.cpp}
-\subsection{Convex Hull}
-\lstinputlisting{Math/ConvexHull.cpp}
-
+\subsection{GaussElimination}
+\lstinputlisting{Math/GaussElimination.cpp}
+\subsection{Inverse}
+\lstinputlisting{Math/Inverse.cpp}
+\subsection{IterSet}
+\lstinputlisting{Math/IterSet.cpp}
+\subsection{LinearPrime}
+\lstinputlisting{Math/LinearPrime.cpp}
+\subsection{SG}
+\lstinputlisting{Math/Sprague-Grundy.cpp}
 
 
 \section{Geometry}
 
+\subsection{2D Point Template}
+\lstinputlisting{Geometry/2Dpoint.cpp}
+\subsection{Intersection of two circle}
+\lstinputlisting{Geometry/Intersection_of_two_circle.cpp}
+\subsection{Convex Hull}
+\lstinputlisting{Geometry/ConvexHull.cpp}
+\subsection{外心 Circumcentre}
+\lstinputlisting{Geometry/circumcentre.cpp}
+\subsection{Smallest Covering Circle}
+\lstinputlisting{Geometry/Smallest_Circle.cpp}
 
 \section{Flow}
 
 \subsection{Dinic}
 \lstinputlisting{Flow/dinic.cpp}
+\subsection{KM}
+\lstinputlisting{Flow/KM}
+\subsection{min cost max flow}
+\lstinputlisting{Flow/mincostmaxflow.cpp}
 
 \section{Graph}
 
@@ -132,7 +162,12 @@ stringstyle=\itshape\color{Green4},
 \lstinputlisting{Graph/Kosaraju_SCC.cpp}
 \subsection{Euler Circuit}
 \lstinputlisting{Graph/EulerCircuit.cpp}
-
+\subsection{Hungarian}
+\lstinputlisting{Graph/Hungarian.cpp}
+\subsection{Maximum Clique}
+\lstinputlisting{Graph/MaximumClique.cpp}
+\subsection{Tarjan}
+\lstinputlisting{Graph/Tarjan.cpp}
 
 \subsection{LCA}
 \lstinputlisting{Graph/LCA.cpp}
@@ -150,6 +185,10 @@ stringstyle=\itshape\color{Green4},
 
 \subsection{KMP}
 \lstinputlisting{String/KMP.h}
+\subsection{AC}
+\lstinputlisting{String/AC.cpp}
+\subsection{Z-value}
+\lstinputlisting{String/Z-value.cpp}
 
 \section{Dark Code}
 

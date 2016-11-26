@@ -1,5 +1,5 @@
-set nu
-set tabstop=4
+set nu	"行號"
+set tabstop=4	"tab寬度"
 set softtabstop=4
 
 set autoindent
@@ -8,4 +8,8 @@ set cindent
 
 set smartindent
 
-nmap <F9> :! clear ; g++ -std=c++11 -static  -Wall -O2  % -o %.out; ./%.out 
+se ai ar sm nu rnu is
+se mouse=a bs=2 so=6 ts=4 ttm=100
+
+nmap <F4> :! cat -n % > %<.print ; lpr %<.print <CR>
+nmap <F9> :! clear ; g++ -std=c++11 -Wall -O2  % -o %<.out; ./%<.out <CR>

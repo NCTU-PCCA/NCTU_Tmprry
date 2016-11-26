@@ -1,16 +1,18 @@
-struct Edge{
-	int from, to, cap, flow;
-};
-
 const int INF = 1<<29;
-const int MAXV = 5003;
 struct Dinic{	//O(VVE)
-	int n, m, s, t;
+	static const int MAXV = 5003;
+	struct Edge{
+		int from, to, cap, flow;
+	};
+
+	int n, m, s, t, d[MAXV], cur[MAXV];
 	vector<Edge> edges;
 	vector<int> G[MAXV];
-	bool vis[MAXV];
-	int d[MAXV];
-	int cur[MAXV];
+
+	void init(int _n=MAXV){
+		edges.clear();
+		for (int i=0; i<_n; i++)G[i].clear();
+	}
 
 	void AddEdge(int from, int to, int cap){
 		edges.push_back( {from,to,cap,0} );
@@ -21,21 +23,20 @@ struct Dinic{	//O(VVE)
 	}
 	
 	bool dinicBFS(){
-		memset(vis,0,sizeof(vis));
+		memset(d,-1,sizeof(d));
 		queue<int> que;
-		que.push(s); vis[s]=1;
+		que.push(s); d[s]=0;
 		while (!que.empty()){
 			int u = que.front(); que.pop();
 			for (int ei:G[u]){
 				Edge &e = edges[ei];
-				if (!vis[e.to] && e.cap>e.flow ){
-					vis[e.to]=1;
-					d[e.to] = d[u]+1;
+				if (d[e.to]<0 && e.cap>e.flow){
+					d[e.to]=d[u]+1;
 					que.push(e.to);
 				}
 			}
 		}
-		return vis[t];
+		return d[t]>=0;
 	}
 
 	int dinicDFS(int u, int a){
@@ -61,8 +62,16 @@ struct Dinic{	//O(VVE)
 		int flow=0, mf;
 		while ( dinicBFS() ){
 			memset(cur,0,sizeof(cur));
-			while ( (mf=diniDFS(s,INF)) )flow+=mf;
+			while ( (mf=dinicDFS(s,INF)) )flow+=mf;
 		}
 		return flow;
 	}
-};
+}dinic;
+
+// s=0, t=1;
+int fnd(int id ,int out=0){
+	// out=0 入點 out=1 出點
+	static int spr=1;
+	//spr=2 時每個點分成入點,出點
+	return id*spr+out+2;
+}
