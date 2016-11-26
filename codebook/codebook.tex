@@ -8,7 +8,7 @@
 \usepackage{fontspec}								%設定字體
 \usepackage{color}
 \usepackage[x11names]{xcolor}
-\usepackage{xeCJK}								%xeCJK
+%\usepackage{xeCJK}								%xeCJK
 \usepackage{listings}								%顯示code用的
 %\usepackage[Glenn]{fncychap}						%排版，頁面模板
 \usepackage{fancyhdr}								%設定頁首頁尾
@@ -16,9 +16,10 @@
 \usepackage{enumerate}
 \usepackage{titlesec}
 \usepackage{amsmath}
+%\@ifpackageloaded{xeCJK}{}{\RequirePackage { xeCJK }}
 \usepackage[CheckSingle, CJKmath]{xeCJK}
-% \usepackage{CJKulem}
 
+% \usepackage{CJKulem}
 %\usepackage[T1]{fontenc}
 \usepackage{amsmath, courier, listings, fancyhdr, graphicx}
 \topmargin=0pt
@@ -35,12 +36,12 @@
 \hoffset=-42pt
 
 %\renewcommand\listfigurename{圖目錄}
-%\renewcommand\listtablename{表目錄} 
+%\renewcommand\listtablename{表目錄}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\setmainfont{Consolas}				%主要字型
-\setmonofont{Monaco}				%主要字型
+\setmainfont{Helvetica}				%主要字型
+\setmonofont{Helvetica}				%主要字型
 \setCJKmainfont{Source Han Sans TC}
 % \setCJKmainfont{Consolas}			%中文字型
 %\setmainfont{sourcecodepro}
@@ -85,7 +86,7 @@ stringstyle=\itshape\color{Green4},
 \fancyhead[L]{NCTU Tmprry (2016/9/28)}
 \fancyhead[R]{\thepage}
 \renewcommand{\headrulewidth}{0.4pt}
-\renewcommand{\contentsname}{Contents} 
+\renewcommand{\contentsname}{Contents}
 
 \scriptsize
 \tableofcontents
