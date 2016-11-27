@@ -1,6 +1,0 @@
-     1	#include <cstdio>
-     2	#include <cstdlib>
-     3	using namespace std;
-     4	int main(){
-     5		printf("GGG\n");
-     6	}

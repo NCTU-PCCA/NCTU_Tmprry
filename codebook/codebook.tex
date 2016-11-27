@@ -18,11 +18,8 @@
 \usepackage{amsmath}
 %\@ifpackageloaded{xeCJK}{}{\RequirePackage { xeCJK }}
 \usepackage[CheckSingle, CJKmath]{xeCJK}
-<<<<<<< HEAD
-=======
 %\usepackage{datetime}
-% \usepackage{CJKulem}
->>>>>>> e58c4fe240035e0d650c3c7b258d2a75ec84faf7
+ \usepackage{CJKulem}
 
 % \usepackage{CJKulem}
 %\usepackage[T1]{fontenc}
@@ -45,10 +42,12 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\setmainfont{Helvetica}				%主要字型
-\setmonofont{Helvetica}				%主要字型
+\setmainfont{Consolas}
+\setmonofont{Monaco}
+%\setmainfont{Helvetica}				%主要字型
+%\setmonofont{Helvetica}				%主要字型
 \setCJKmainfont{Source Han Sans TC}
-% \setCJKmainfont{Consolas}			%中文字型
+%\setCJKmainfont{Consolas}			%中文字型
 %\setmainfont{sourcecodepro}
 \XeTeXlinebreaklocale "zh"						%中文自動換行
 \XeTeXlinebreakskip = 0pt plus 1pt				%設定段落之間的距離
@@ -101,7 +100,9 @@ stringstyle=\itshape\color{Green4},
 
 \section{Basic}
 
-\subsection{vimrc}
+\subsection{/.bashrc}
+\lstinputlisting{Basic/bashrc}
+\subsection{/.vimrc}
 \lstinputlisting{Basic/vimrc}
 \subsection{Faster cin }
 \lstinputlisting{Basic/fastercin.cpp}
