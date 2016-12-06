@@ -1,4 +1,3 @@
-// From https://github.com/bobogei81123/bcw_codebook/blob/master/codes/Graph/Matching/Kuhn_Munkres.cpp
 struct KM{
 // Maximum Bipartite Weighted Matching (Perfect Match)
 	static const int MXN = 650;
