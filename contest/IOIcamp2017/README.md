@@ -6,8 +6,5 @@
 	- https://judge.ioicamp.org
 
 # Day1 瀚瀚時間
-- OOXX
-	- OOXX
-	- OOXX
 
 # Day1 DP
