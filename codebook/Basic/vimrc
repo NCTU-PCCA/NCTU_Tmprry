@@ -12,5 +12,5 @@ se mouse=a bs=2 so=6 ts=4 ttm=100
 nmap <F2> :! gedit %<.in <CR>
 nmap <F4> :! date > %<.pt; cat -n % > %<.pt; lpr %<.pt <CR>
 nmap <F8> :! clear ; python3 % <CR>
-nmap <F9> :! clear ; g++ -std=c++11 -Wall -O2  % -o %<.out; ./%<.out < %<.in <CR>
-nmap <F10> :! clear ; g++ -std=c++11 -Wall -O2  % -o %<.out; ./%<.out <CR>
+nmap <F9> :! clear ; make file=%; ./%<.out < %<.in <CR>
+nmap <F10> :! clear ; make file=%; ./%<.out <CR>
