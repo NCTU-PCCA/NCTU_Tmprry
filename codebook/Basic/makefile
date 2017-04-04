@@ -2,8 +2,9 @@ CPP = g++ -std=c++11 -O2
 
 name = $(basename $(file))
 type = $(suffix $(file))
+exe = $(name).out
 
-$(name).out: $(file)
+$(exe): $(file)
 ifeq ($(type),.cpp)
-	$(CPP) -o $(name).out $(name).cpp
+	$(CPP) -o $(exe) $(name).cpp
 endif
