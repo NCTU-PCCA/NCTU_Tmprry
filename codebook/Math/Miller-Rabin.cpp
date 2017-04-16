@@ -1,14 +1,25 @@
 typedef long long LL;
 
-LL bin_pow(LL a, LL n, LL MOD){
+inline LL bin_mul(LL a, LL n,const LL& MOD){
+	LL re=0;
+	while (n>0){
+		if (n&1) re += a;
+		a += a; if (a>=MOD) a-=MOD;
+		n>>=1;
+	}
+	return re%MOD;
+}
+
+inline LL bin_pow(LL a, LL n,const LL& MOD){
 	LL re=1;
 	while (n>0){
-		if (n&1)re = re*a %MOD;
-		a = a*a %MOD;
+		if (n&1) re = bin_mul(re,a,MOD);
+		a = bin_mul(a,a,MOD);
 		n>>=1;
 	}
 	return re;
 }
+
 bool is_prime(LL n){
 	//static LL sprp[3] = { 2LL, 7LL, 61LL}; 
 	static LL sprp[7] = { 2LL, 325LL, 9375LL, 
@@ -17,7 +28,7 @@ bool is_prime(LL n){
 	if (n==1 || (n&1)==0 ) return n==2;
 	int u=n-1, t=0; 
 	while ( (u&1)==0 ) u>>=1, t++;
-	for (int i=0; i<7; i++){
+	for (int i=0; i<3; i++){
 		LL x = bin_pow( sprp[i]%n, u, n);
 		if (x==0 || x==1 || x==n-1)continue;
 		
