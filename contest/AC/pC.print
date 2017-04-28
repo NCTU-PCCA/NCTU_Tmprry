@@ -1,0 +1,128 @@
+     1	#include <bits/stdc++.h>
+     2	using namespace std;
+     3	
+     4	const int MAXN = 2003;
+     5	
+     6	typedef long long LL;
+     7	typedef int T;
+     8	
+     9	struct Point {
+    10	    T x, y;
+    11	    Point (T _x=0, T _y=0):x(_x),y(_y){ }
+    12	    Point operator + (const Point &b)const{
+    13	        return Point(x+b.x,y+b.y);
+    14	    }
+    15	};
+    16	Point p[MAXN];
+    17	
+    18	typedef pair<Point,Point> Rec;
+    19	vector<Rec> recs;
+    20	
+    21	int w, l, n;
+    22	void input(){
+    23	    for (int i=0; i<n; i++){
+    24	        scanf("%d %d",&p[i].x,&p[i].y);
+    25	    }
+    26	    recs.clear();
+    27	    for (int i=1; i<n; i++){
+    28	        Point p00 = p[i-1], p10 = p[i];
+    29	        Point p01 = p00 + Point(w,l);
+    30	        Point p11 = p10 + Point(w,l);
+    31	        Point d0 ,d1;
+    32	        d0.x = min(p00.x,p10.x);
+    33	        d0.y = min(p00.y,p10.y);
+    34	        d1.x = max(p01.x,p11.x);
+    35	        d1.y = max(p01.y,p11.y);
+    36	        //printf("(%d,%d) (%d,%d)\n",d0.x,d0.y,d1.x,d1.y);
+    37	        recs.push_back( (Rec){d0,d1} );
+    38	    }
+    39	    //puts("");
+    40	}
+    41	
+    42	map<int,int> Hashx, Hashy;
+    43	map<int,int> unHashx, unHashy;
+    44	typedef tuple<int,int,int> tiii;
+    45	vector< tiii > Q[MAXN];
+    46	set<int> xs, ys;
+    47	
+    48	void build_query(){
+    49	    for (int i=0; i<MAXN; i++)Q[i].clear();
+    50	    
+    51	    xs.clear();
+    52	    ys.clear();
+    53	    Hashx.clear(); unHashx.clear();
+    54	    Hashy.clear(); unHashy.clear();
+    55	    for (auto &rec:recs){
+    56	        xs.insert(rec.first.x);
+    57	        ys.insert(rec.first.y);
+    58	        xs.insert(rec.second.x);
+    59	        ys.insert(rec.second.y);
+    60	    }
+    61	    
+    62	    {    int i=0;
+    63	        for (int ele:xs){
+    64	            Hashx[ele]=i;
+    65	            unHashx[i]=ele;
+    66	            printf("uHashx[%d]=%d\n",i,unHashx[i]);
+    67	            i++;
+    68	        }
+    69	    }
+    70	    //puts("");
+    71	    {    int i=0;
+    72	        for (int ele:ys){
+    73	            Hashy[ele]=i;
+    74	            //printf("Hashy[%d]=%d\n",ele,i);
+    75	            unHashy[i]=ele;
+    76	            i++;
+    77	        }
+    78	    }
+    79	    for (auto &rec:recs){
+    80	        int y0 = rec.first.y; y0 = Hashy[y0];
+    81	        int y1 = rec.second.y; y1 = Hashy[y1];
+    82	        Q[ Hashx[rec.first.x]  ].push_back( (tiii){y0,y1,1} );
+    83	        Q[ Hashx[rec.second.x] ].push_back( (tiii){y0,y1,-1} );
+    84	        //printf("(%d,%d,%d,%d)\n",Hashx[rec.first.x],y0,y1,1);
+    85	        //printf("(%d,%d,%d,%d)\n",Hashx[rec.second.x],y0,y1,-1);
+    86	    }
+    87	}
+    88	
+    89	int sum[MAXN], pre[MAXN];
+    90	void count_area(){
+    91	    memset(pre,0,sizeof(pre));
+    92	    long long ans = 0;
+    93	    for (int i=0; i<xs.size()-1; i++){
+    94	        sum[0]=pre[0];
+    95	        for (int j=1; j<ys.size(); j++)sum[j]=sum[j-1]+pre[j];
+    96	        for (int j=0; j<ys.size(); j++)printf("%2d",sum[j]);
+    97	        puts("");
+    98	        for (int j=0; j<ys.size(); j++)if (sum[j]){
+    99	            printf("unHashx[i+1]=%d, unHashx[i]=%d\n",unHashx[i+1], unHashx[i]);
+   100	            int dx = unHashx[i+1]-unHashx[i];
+   101	            int dy = unHashy[j+1]-unHashy[j];
+   102	            printf("dxdy %d %d\n",dx,dy);
+   103	            ans += (LL)dx*dy;
+   104	        }
+   105	
+   106	        printf("pre %d\n",i);
+   107	        for (auto que:Q[i]){
+   108	            pre[ get<0>(que) ]+=get<2>(que);
+   109	            pre[ get<1>(que) ]-=get<2>(que);
+   110	            printf("(%d %d %d)",get<0>(que),get<1>(que),get<2>(que));
+   111	            puts("");
+   112	        }
+   113	//        for (int j=0; j<ys.size(); j++)printf("%3d",pre[j]);
+   114	        puts("");
+   115	    }
+   116	
+   117	    printf("%lld\n",ans);
+   118	}
+   119	
+   120	int main(){
+   121	    while ( scanf("%d%d%d", &w, &l, &n) ){
+   122	        if (w==0 && l==0 && n==0)return 0;
+   123	        input();
+   124	        build_query();
+   125	        count_area();
+   126	    }
+   127	}
+   128	

@@ -1,0 +1,144 @@
+     1	#include<bits/stdc++.h>
+     2	using namespace std;
+     3	
+     4	const int MAXD = 205;
+     5	const int MAXS = 12005;
+     6	const int MAXP = 85;
+     7	int D, S, P;
+     8	int limit[MAXD];
+     9	int weight[MAXD][5];
+    10	int student[MAXS][5];
+    11	int prefer[MAXS][MAXP];
+    12	
+    13	bool input() {
+    14		scanf("%d", &D);
+    15		if ( D == 0 ) return false;
+    16		scanf("%d %d", &S, &P);
+    17		for ( int i = 0 ; i < D; i++ ) {
+    18			
+    19			scanf("%d", &limit[i]);
+    20			for ( int j = 0 ; j < 5 ; j++ ) {
+    21				scanf("%d", &weight[i][j]);
+    22			}
+    23		}
+    24		for ( int i = 0 ; i < S ; i++ ) {
+    25			for ( int j = 0 ; j < 5 ; j++ ) {
+    26				scanf("%d", &student[i][j]);
+    27			}
+    28		}
+    29		for ( int i = 0 ; i < S ; i++ ) {
+    30			for ( int j = 0 ; j < P ; j++ ) {
+    31				scanf("%d", &prefer[i][j]);		
+    32			}
+    33		}
+    34		return true;
+    35	}
+    36	
+    37	struct admission {
+    38		int department_id;
+    39		int student_id;
+    40		int student_next;
+    41		int s[5];
+    42		bool operator<(const admission&b) const {
+    43			int tot = 0, totb = 0;
+    44			for ( int i = 0 ; i < 5 ; i++ ) {
+    45				tot += s[i] * weight[department_id][i];
+    46				totb += b.s[i] * weight[department_id][i];
+    47			}
+    48			return tot < totb;
+    49		}
+    50		bool operator==(const admission&b) const {
+    51			int tot = 0, totb = 0;
+    52			for ( int i = 0 ; i < 5 ; i++ ) {
+    53				tot += s[i] * weight[department_id][i];
+    54				totb += b.s[i] * weight[department_id][i];
+    55			}
+    56			return tot == totb;
+    57		}
+    58	};
+    59	multiset<admission> ads[MAXD];
+    60	typedef pair<int, int> pii;
+    61	
+    62	vector<admission> get_bad(int department ) {
+    63		vector<admission> res;
+    64		admission tp = *ads[department].begin();
+    65		res.push_back(tp);
+    66		ads[department].erase(ads[department].begin());
+    67		while ( !ads[department].empty() && *ads[department].begin() == tp ) {
+    68			res.push_back(*ads[department].begin());
+    69			ads[department].erase(ads[department].begin());
+    70		}
+    71		return res;
+    72	}
+    73	
+    74	void solve() {
+    75	
+    76		puts("HJ");
+    77		queue<pii> que;
+    78		for ( int i = 0 ; i < S ; i++ ) {
+    79			que.push({i,0});
+    80		}
+    81		while ( !que.empty() ) {
+    82			pii the = que.front(); que.pop();
+    83			int stu = the.first;
+    84			int odr = the.second;
+    85			int depart = prefer[stu][odr];
+    86	
+    87			if ( odr >= P ) continue;
+    88	
+    89			admission pending;
+    90			pending.department_id = depart;
+    91			pending.student_id = stu;
+    92			pending.student_next = odr + 1;
+    93			for ( int i = 0 ; i < 5 ; i++ ) pending.s[i] = student[stu][i];
+    94			
+    95			if ( ads[depart].size() < limit[depart] ) {
+    96				ads[depart].insert(pending);
+    97				continue;
+    98			} // limit = 0? 
+    99	
+   100			vector<admission> bad;
+   101			bad = get_bad(depart);
+   102			if ( pending < bad[0] || pending == bad[0] ) {
+   103				for (auto tt : bad) {
+   104					ads[depart].insert(tt);
+   105				}
+   106				if ( bad[0] == pending ) {
+   107					ads[depart].insert(pending);
+   108				}
+   109			} else {
+   110				for (auto tt : bad) {
+   111					que.push({ tt.student_id, tt.student_next });
+   112				}
+   113				que.push({stu, odr + 1});
+   114			}
+   115		}
+   116		puts("HJe");
+   117	}
+   118	
+   119	void print() {
+   120	
+   121		int ansa, ansb, ansc, ansd;
+   122		ansa = ansb = ansc = ansd = 0;
+   123		
+   124		for ( int i = 0 ; i < D; i++ ) {
+   125			ansa += ads[i].size();
+   126			for ( auto it : ads[i] ) {
+   127				if ( it.student_next == 1 ) {
+   128					ansb++;
+   129				}
+   130			}
+   131			if ( ads[i].size() > limit[i] ) ansc++;
+   132			if ( ads[i].size() < limit[i] ) ansd++;
+   133		}
+   134	
+   135		printf("%d %d %d %d\n", ansa, ansb, ansc, ansd);
+   136	}
+   137	
+   138	
+   139	int main() {
+   140		while ( input() ) {
+   141			solve();
+   142			print();
+   143		}
+   144	}
