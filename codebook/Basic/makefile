@@ -6,5 +6,8 @@ exe = $(name).out
 
 $(exe): $(file)
 ifeq ($(type),.cpp)
-	$(CPP) -o $(exe) $(name).cpp
+	$(CPP) -D AC -o $(exe) $(name).cpp
 endif
+
+clean:
+	rm *.out
