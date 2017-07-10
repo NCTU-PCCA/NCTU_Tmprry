@@ -10,7 +10,7 @@ void build_KMP(int n, T *s, int *f){ // 1 base
 
 template<typename T>
 int KMP(int n, T *a, int m, T *b){
-	build_KMP(n,b,f);
+	build_KMP(m,b,f);
 	int ans=0;
 
 	for (int i=1, w=0; i<=n; i++){
