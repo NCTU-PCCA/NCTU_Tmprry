@@ -8,7 +8,7 @@ const long long INF = 1LL<<60;
 void Dijkstra(int n, vector<Edge> G[], long long d[], int s, int t=-1){
     static priority_queue<State, vector<State>, greater<State> > pq;
     while ( pq.size() )pq.pop();
-    for (int i=1; i<=n; i++)d[i]=INF, vis[i]=0;
+    for (int i=1; i<=n; i++)d[i]=INF;
     d[s]=0; pq.push( (State){s,d[s]} );
     while ( pq.size() ){
         auto x = pq.top(); pq.pop();
