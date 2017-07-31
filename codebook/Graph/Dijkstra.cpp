@@ -1,4 +1,4 @@
-typedef struct Edge{enileni
+typedef struct Edge{
     int v; long long len;
     bool operator > (const Edge &b)const { return len>b.len; }
 } State;
