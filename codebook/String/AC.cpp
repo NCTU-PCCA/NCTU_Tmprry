@@ -1,56 +1,67 @@
-// by bcw_codebook
-struct ACautomata{
-  struct Node{
-    int cnt,dp;
-    Node *go[26], *fail;
-    Node (){
-      cnt = 0;
-      dp = -1;
-      memset(go,0,sizeof(go));
-      fail = 0;
-    }
-  };
+// remember make_fail() !!!
+// notice MLE
 
-  Node *root, pool[1048576];
-  int nMem;
+const int sigma = 62;
+const int MAXC = 200005;
 
-  Node* new_Node(){
-    pool[nMem] = Node();
-    return &pool[nMem++];
-  }
-  void init(){
-    nMem = 0;
-    root = new_Node();
-  }
-  void add(const string &str){
-    insert(root,str,0);
-  }
-  void insert(Node *cur, const string &str, int pos){
-    if (pos >= (int)str.size()){
-      cur->cnt++;
-      return;
-    }
-    int c = str[pos]-'a';
-    if (cur->go[c] == 0){
-      cur->go[c] = new_Node();
-    }
-    insert(cur->go[c],str,pos+1);
-  }
-  void make_fail(){
-    queue<Node*> que;
-    que.push(root);
-    while (!que.empty()){
-      Node* fr=que.front();
-      que.pop();
-      for (int i=0; i<26; i++){
-        if (fr->go[i]){
-          Node *ptr = fr->fail;
-          while (ptr && !ptr->go[i]) ptr = ptr->fail;
-          if (!ptr) fr->go[i]->fail = root;
-          else fr->go[i]->fail = ptr->go[i];
-          que.push(fr->go[i]);
+inline int idx(char c){
+    if ('A'<= c && c <= 'Z')return c-'A';
+    if ('a'<= c && c <= 'z')return c-'a' + 26;
+    if ('0'<= c && c <= '9')return c-'0' + 52;
+}
+
+struct ACautomaton{
+    struct Node{
+        Node *next[sigma], *fail;
+        int cnt; // dp
+        Node(){
+            memset(next,0,sizeof(next));
+            fail=0;
+            cnt=0;
         }
-      }
+    } buf[MAXC], *bufp, *ori, *root;
+    
+    void init(){
+        bufp = buf;
+        ori = new (bufp++) Node();
+        root = new (bufp++) Node();
     }
-  }
-};
+
+    void insert(int n, char *s){
+        Node *ptr = root;
+        for (int i=0; s[i]; i++){
+            int c = idx(s[i]);
+            if (ptr->next[c]==NULL)
+                ptr->next[c] = new (bufp++) Node();
+            ptr = ptr->next[c];
+        }
+        ptr->cnt=1;
+    }
+
+    Node* trans(Node *o, int c){
+        while (o->next[c]==NULL){
+            o = o->fail;
+            if (o==NULL)puts("error");
+        }
+        return o->next[c];
+    }
+
+    void make_fail(){
+        static queue<Node*> que;
+
+        for (int i=0; i<sigma; i++)
+            ori->next[i] = root;
+        root->fail = ori;
+
+        que.push(root);
+        while ( que.size() ){
+            Node *u = que.front(); que.pop();
+            for (int i=0; i<sigma; i++){
+                if (u->next[i]==NULL)continue;
+                u->next[i]->fail = trans(u->fail,i);
+                que.push(u->next[i]);
+            }
+            u->cnt += u->fail->cnt;
+        }
+    }
+} ac;
