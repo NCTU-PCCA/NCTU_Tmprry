@@ -39,10 +39,7 @@ struct ACautomaton{
     }
 
     Node* trans(Node *o, int c){
-        while (o->next[c]==NULL){
-            o = o->fail;
-            if (o==NULL)puts("error");
-        }
+        while (o->next[c]==NULL) o = o->fail;
         return o->next[c];
     }
 
