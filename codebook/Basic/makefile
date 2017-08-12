@@ -7,6 +7,9 @@ exe = $(name).out
 $(exe): $(file)
 ifeq ($(type),.cpp)
 	$(CPP) -D AC -o $(exe) $(name).cpp
+else ifeq ($(type),.py)
+	cp $(file) $(exe)
+	chmod +x $(exe)
 endif
 
 clean:
