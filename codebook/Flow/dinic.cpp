@@ -1,3 +1,4 @@
+// 只能拿一次的點都要在點上加上 cap 1
 const int INF = 1<<29;
 struct Dinic{	//O(VVE)
 	static const int MAXV = 5003;
