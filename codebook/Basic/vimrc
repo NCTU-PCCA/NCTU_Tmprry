@@ -1,7 +1,7 @@
 set nu ai si cin ts=4 sw=4 sts=4
 
-nmap <F2>  :! gedit %<.in %<*.in &<CR>
-nmap <F4> :! date > %<.pt; cat -n % > %<.pt; lpr %<.pt <CR>
-nmap <F9>  :! clear ; g++ -std=c++11 -O2 -D AC -o %<.out % ; for i in %<*.in; do echo $i; ./%<.out < $i; echo ""; done <CR>
-nmap <F10> :! clear ; g++ -std=c++11 -O2 -D AC -o %<.out % ; ./%<.out <CR>
+nmap #2 :! gedit %<.in %<*.in &<CR>
+nmap #4 :! date > %<.pt; cat -n % > %<.pt; lpr %<.pt <CR>
+nmap #9 :! clear ; g++ -std=c++11 -O2 -D AC -o %<.out % ; for i in %<*.in; do echo $i; ./%<.out < $i; echo ""; done <CR>
+nmap #0 :! clear ; g++ -std=c++11 -O2 -D AC -o %<.out % ; ./%<.out <CR>
 nmap <C-I> :! read -p "CASE:" CASE; gedit %<_$CASE.in <CR>
