@@ -1,17 +1,7 @@
-set nu		" 顯示行號
-set tabstop=4	" tab 的字元數
-set ai
-set smartindent
-set softtabstop=4
-set shiftwidth=4
-set cindent
+set nu ai si cin ts=4 sw=4 sts=4
 
-se ai ar sm nu rnu is
-se mouse=a bs=2 so=6 ts=4 ttm=100
-
-nmap <F2> :! gedit %<.in %<*.in &<CR>
+nmap <F2>  :! gedit %<.in %<*.in &<CR>
 nmap <F4> :! date > %<.pt; cat -n % > %<.pt; lpr %<.pt <CR>
-nmap <F8> :! clear ; python3 % <CR>
-nmap <F9> :! clear ; make file=%; for i in %<*.in; do echo $i; ./%<.out < $i; echo -e "\n"; done <CR>
-nmap <F10> :! clear ; make file=%; ./%<.out <CR>
+nmap <F9>  :! clear ; g++ -std=c++11 -O2 -D AC -o %<.out % ; for i in %<*.in; do echo $i; ./%<.out < $i; echo ""; done <CR>
+nmap <F10> :! clear ; g++ -std=c++11 -O2 -D AC -o %<.out % ; ./%<.out <CR>
 nmap <C-I> :! read -p "CASE:" CASE; gedit %<_$CASE.in <CR>
