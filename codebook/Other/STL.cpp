@@ -16,3 +16,8 @@ flip()  // all flip
 flip(k) // s[k] flip 
 to_ulong()
 to_string()
+
+// unique vector
+sort(a.begin(),a.end())
+a.earse( unique(a.begin(),a.end()), a.end() )
+
