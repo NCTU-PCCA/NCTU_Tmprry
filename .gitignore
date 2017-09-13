@@ -1,6 +1,7 @@
 *.log
 *.toc
 *.aux
-.DS_Store
+*.DS_Store
+*.fdb_latexmk
 *.out
 *.o
