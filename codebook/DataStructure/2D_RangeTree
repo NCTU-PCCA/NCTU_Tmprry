@@ -14,12 +14,18 @@ struct TREE{
     int toleft;
 }tree[LGN][MAXN];
 struct SEG{
+    T mx, Mx;
+    int sz;
     TREE *st;
 }seg[MAXN*4];
 
 vector<Point> P;
 
 void build(int l, int r, int o, int deep){
+    seg[o].mx = P[l].x;
+    seg[o].Mx = P[r].x;
+    seg[o].sz = r-l+1;;
+
     if(l == r){
         tree[deep][r].pt = P[r];
         tree[deep][r].toleft = 0;
