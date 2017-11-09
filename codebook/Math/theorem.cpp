@@ -51,5 +51,9 @@ construct a solution:
   = k*M + ∑ a_i * t_i * M_i, k is positive integer.
 
   under mod M, there is one solution x = ∑ a_i * t_i * M_i
-
+-------------------------------------------------------
+Burnside's lemma
+|G| * |X/G|  = sum( |X^g| ) where g in G
+總方法數: 每一種旋轉下不動點的個數總和 除以 旋轉的方法數
 */
+
