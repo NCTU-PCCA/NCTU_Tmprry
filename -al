@@ -1,0 +1,202 @@
+* [31m0577c14[m -[33m (HEAD -> master, origin/master, origin/HEAD)[m Update suffix_array.cpp [32m(22 minutes ago) [1;34m<ggh93234999>[m
+* [31m8630a88[m -[33m[m Update suffix_array.cpp [32m(38 minutes ago) [1;34m<ggh93234999>[m
+*   [31m1094865[m -[33m[m Merge branch 'master' of github.com:NCTU-PCCA/NCTU_Tmprry [32m(50 minutes ago) [1;34m<Yuxin Zhou>[m
+[32m|[m[33m\[m  
+[32m|[m *   [31m6edfc3b[m -[33m[m Merge branch 'master' of github.com:NCTU-PCCA/NCTU_Tmprry [32m(76 minutes ago) [1;34m<cthbst>[m
+[32m|[m [34m|[m[35m\[m  
+[32m|[m * [35m\[m   [31m38fcdd7[m -[33m[m Merge branch 'master' of github.com:NCTU-PCCA/NCTU_Tmprry [32m(2 hours ago) [1;34m<cthbst>[m
+[32m|[m [36m|[m[1;31m\[m [35m\[m  
+[32m|[m * [1;31m|[m [35m|[m [31mfdb225e[m -[33m[m update makefile [32m(2 hours ago) [1;34m<cthbst>[m
+* [1;31m|[m [1;31m|[m [35m|[m [31m48f7ea9[m -[33m[m add Chinese Remainder Theorem [32m(50 minutes ago) [1;34m<Yuxin Zhou>[m
+[35m|[m [1;31m|[m[35m_[m[1;31m|[m[35m/[m  
+[35m|[m[35m/[m[1;31m|[m [1;31m|[m   
+* [1;31m|[m [1;31m|[m [31m36e5e38[m -[33m[m polish Gomory_Hu [32m(77 minutes ago) [1;34m<Yuxin Zhou>[m
+[1;31m|[m [1;31m|[m[1;31m/[m  
+[1;31m|[m[1;31m/[m[1;31m|[m   
+* [1;31m|[m [31m08b1256[m -[33m[m add pollardRho [32m(2 hours ago) [1;34m<Yuxin Zhou>[m
+[1;31m|[m[1;31m/[m  
+* [31ma3839e9[m -[33m[m upd codebook & matching & flow [32m(3 hours ago) [1;34m<Yuxin Zhou>[m
+* [31m741a1ab[m -[33m[m update geometry [32m(2 days ago) [1;34m<cthbst>[m
+* [31mbaadc20[m -[33m[m polish match algo [32m(10 days ago) [1;34m<Yuxin Zhou>[m
+* [31mb642844[m -[33m[m new codebook [32m(12 days ago) [1;34m<cthbst>[m
+* [31mf72ee3b[m -[33m[m equipment upgraded [32m(3 weeks ago) [1;34m<Yuxin Zhou>[m
+* [31mee80bee[m -[33m[m Create Mo_algorithm.cpp [32m(3 weeks ago) [1;34m<ggh93234999>[m
+* [31m3cbdb37[m -[33m[m Create Treap_Lin.cpp [32m(5 weeks ago) [1;34m<ggh93234999>[m
+* [31m4da73bd[m -[33m[m Create Manhattan MST [32m(6 weeks ago) [1;34m<Yuxin Zhou>[m
+* [31m4421576[m -[33m[m add autoCommit.sh [32m(7 weeks ago) [1;34m<cthbst>[m
+* [31m8e312b5[m -[33m[m Rename 2D_RangeTree to 2D_RangeTree.cpp [32m(7 weeks ago) [1;34m<ggh93234999>[m
+* [31m7c713dc[m -[33m[m Update 2D_RangeTree [32m(7 weeks ago) [1;34m<ggh93234999>[m
+* [31m7b81c3d[m -[33m[m Create 2D_RangeTree [32m(7 weeks ago) [1;34m<ggh93234999>[m
+* [31meba920c[m -[33m[m Create Parser.cpp [32m(7 weeks ago) [1;34m<ggh93234999>[m
+*   [31mde831dc[m -[33m[m Merge branch 'master' of https://github.com/NCTU-PCCA/NCTU_Tmprry [32m(8 weeks ago) [1;34m<cthbst>[m
+[1;32m|[m[1;33m\[m  
+[1;32m|[m * [31mb8f0b9e[m -[33m[m Update README.md [32m(8 weeks ago) [1;34m<吳宗達>[m
+* [1;33m|[m [31m2d0327a[m -[33m[m add bitwise operation [32m(8 weeks ago) [1;34m<cthbst>[m
+[1;33m|[m[1;33m/[m  
+* [31m8fa0cd5[m -[33m[m Delete README.md [32m(8 weeks ago) [1;34m<吳宗達>[m
+* [31m2e73e99[m -[33m[m make codebook [32m(8 weeks ago) [1;34m<cthbst>[m
+* [31ma4ce2ef[m -[33m[m add test list && rename debug list [32m(8 weeks ago) [1;34m<cthbst>[m
+* [31ma525f68[m -[33m[m STL unique [32m(8 weeks ago) [1;34m<cthbst>[m
+* [31maebf249[m -[33m[m update 2Dpoint.cpp [32m(8 weeks ago) [1;34m<cthbst>[m
+* [31m84627fa[m -[33m[m PTC 1709 [32m(8 weeks ago) [1;34m<cthbst>[m
+* [31m79bb5f4[m -[33m[m 2017 年度賽 [32m(8 weeks ago) [1;34m<cthbst>[m
+* [31m796d177[m -[33m[m add makefile for codebook [32m(8 weeks ago) [1;34m<cthbst>[m
+* [31m35b3b1e[m -[33m[m update .gitignore [32m(8 weeks ago) [1;34m<cthbst>[m
+* [31m2435be1[m -[33m[m rm .DS_Store .fdb_latexmk [32m(8 weeks ago) [1;34m<cthbst>[m
+* [31m95b0f5f[m -[33m[m add python sample code [32m(9 weeks ago) [1;34m<cthbst>[m
+* [31m4abe2d9[m -[33m[m update vimrc [32m(9 weeks ago) [1;34m<cthbst>[m
+* [31mde3c212[m -[33m[m content.tex add 1D/1D dp [32m(9 weeks ago) [1;34m<cthbst>[m
+* [31mbca54bc[m -[33m[m add 1d/1d dp solution [32m(9 weeks ago) [1;34m<Yuxin Zhou>[m
+* [31m311c380[m -[33m[m update vimrc [32m(9 weeks ago) [1;34m<cthbst>[m
+* [31maa5d037[m -[33m[m TOPC 2017 [32m(3 months ago) [1;34m<cthbst>[m
+* [31m94ba141[m -[33m[m make codebook [32m(3 months ago) [1;34m<cthbst>[m
+* [31m5f05f2c[m -[33m[m add smallest_rotation [32m(3 months ago) [1;34m<吳宗達>[m
+* [31m79b9ba3[m -[33m[m makefile add python [32m(3 months ago) [1;34m<吳宗達>[m
+*   [31mf03c0fd[m -[33m[m Merge pull request #21 from NCTU-PCCA/Palindromic-tree [32m(3 months ago) [1;34m<吳宗達>[m
+[1;34m|[m[1;35m\[m  
+[1;34m|[m * [31mf2aac4d[m -[33m[m Create PalindromicTree.cpp [32m(3 months ago) [1;34m<吳宗達>[m
+[1;34m|[m[1;34m/[m  
+* [31m0a3a505[m -[33m[m Delete 年度賽報名表.doc [32m(3 months ago) [1;34m<吳宗達>[m
+* [31m50b5f8a[m -[33m[m PTC1708 [32m(3 months ago) [1;34m<cthbst>[m
+* [31ma773d49[m -[33m[m update AC automaton [32m(3 months ago) [1;34m<cthbst>[m
+* [31m0d29e17[m -[33m[m update AC automaton [32m(3 months ago) [1;34m<cthbst>[m
+* [31m2a16071[m -[33m[m Update Dijkstra.cpp [32m(3 months ago) [1;34m<吳宗達>[m
+* [31m4e15729[m -[33m[m Update Dijkstra.cpp [32m(3 months ago) [1;34m<吳宗達>[m
+* [31mc12f9ca[m -[33m[m Update Dijkstra.cpp [32m(4 months ago) [1;34m<吳宗達>[m
+* [31mfa6c14c[m -[33m[m Update Dijkstra.cpp [32m(4 months ago) [1;34m<吳宗達>[m
+* [31md60891d[m -[33m[m Update Dijkstra.cpp [32m(4 months ago) [1;34m<吳宗達>[m
+* [31mb4271fd[m -[33m[m Update ConvexHull.cpp [32m(4 months ago) [1;34m<吳宗達>[m
+* [31mcb7211d[m -[33m[m Create Dijkstra.cpp [32m(4 months ago) [1;34m<吳宗達>[m
+* [31me951f21[m -[33m[m Update Tarjan.cpp [32m(4 months ago) [1;34m<吳宗達>[m
+* [31m35596b2[m -[33m[m Update KMP.h [32m(4 months ago) [1;34m<ggh93234999>[m
+* [31med08de3[m -[33m[m PTC1706 [32m(5 months ago) [1;34m<cthbst>[m
+*   [31m9ed0886[m -[33m[m Merge branch 'master' of https://github.com/NCTU-PCCA/NCTU_Tmprry [32m(6 months ago) [1;34m<cthbst>[m
+[1;36m|[m[31m\[m  
+[1;36m|[m * [31m2680a99[m -[33m[m init stable marriage [32m(6 months ago) [1;34m<Yuxin Zhou>[m
+* [31m|[m [31m8834f5e[m -[33m[m ITSA 2017 [32m(6 months ago) [1;34m<cthbst>[m
+[31m|[m[31m/[m  
+* [31m33d6139[m -[33m[m add 2-SAT [32m(6 months ago) [1;34m<cthbst>[m
+* [31mbb480d5[m -[33m[m modify codebook fontstyle [32m(7 months ago) [1;34m<Yuxin Zhou>[m
+* [31m48d60d4[m -[33m[m add DigitCounting [32m(7 months ago) [1;34m<cthbst>[m
+* [31mf427bc6[m -[33m[m FWHT.cpp [32m(7 months ago) [1;34m<cthbst>[m
+* [31m51c464d[m -[33m[m fix Miller Rabin [32m(7 months ago) [1;34m<cthbst>[m
+* [31m0bc27bb[m -[33m[m add debug list [32m(7 months ago) [1;34m<cthbst>[m
+* [31m42e1d63[m -[33m[m add school name to codebook [32m(7 months ago) [1;34m<cthbst>[m
+* [31m2a279af[m -[33m[m SAM and general graph matching [32m(7 months ago) [1;34m<cthbst>[m
+* [31m1ee038f[m -[33m[m PTC 1704 [32m(7 months ago) [1;34m<cthbst>[m
+* [31m0bf29bd[m -[33m[m update rc [32m(7 months ago) [1;34m<cthbst>[m
+* [31ma391a9f[m -[33m[m add makefile [32m(7 months ago) [1;34m<cthbst>[m
+* [31m4fffdaf[m -[33m[m add python to vimrc [32m(8 months ago) [1;34m<cthbst>[m
+* [31md379d41[m -[33m[m add FFT [32m(8 months ago) [1;34m<cthbst>[m
+* [31m84af8f8[m -[33m[m Update vimrc [32m(9 months ago) [1;34m<ggh93234999>[m
+* [31m009e917[m -[33m[m Competitive Programming qualification [32m(9 months ago) [1;34m<cthbst>[m
+* [31m42d9e07[m -[33m[m IOIcamp 2017 [32m(9 months ago) [1;34m<cthbst>[m
+* [31m61d3a3e[m -[33m[m update suffix array [32m(9 months ago) [1;34m<cthbst>[m
+* [31m73b55b3[m -[33m[m IOIcamp 2017 [32m(9 months ago) [1;34m<cthbst>[m
+* [31m6473507[m -[33m[m IOIcamp 2017 Day1 sample [32m(9 months ago) [1;34m<cthbst>[m
+* [31m1ed8be8[m -[33m[m init IOIcamp 2017 [32m(9 months ago) [1;34m<cthbst>[m
+* [31m743a3af[m -[33m[m modify codebook.tex [32m(11 months ago) [1;34m<cthbst>[m
+* [31m1694660[m -[33m[m PTC11 code [32m(11 months ago) [1;34m<cthbst>[m
+* [31ma112cf6[m -[33m[m PTC 1612 code [32m(11 months ago) [1;34m<cthbst>[m
+* [31mb9e7dfd[m -[33m[m Add files via upload [32m(11 months ago) [1;34m<吳宗達>[m
+* [31m0076f72[m -[33m[m Create README.md [32m(11 months ago) [1;34m<吳宗達>[m
+* [31me3da008[m -[33m[m Delete PTC1612 [32m(11 months ago) [1;34m<吳宗達>[m
+* [31m0b53413[m -[33m[m Create PTC1612 [32m(11 months ago) [1;34m<吳宗達>[m
+* [31m6851db2[m -[33m[m Add files via upload [32m(11 months ago) [1;34m<吳宗達>[m
+* [31mb637c4f[m -[33m[m Update README.md [32m(11 months ago) [1;34m<吳宗達>[m
+* [31m4c55b9b[m -[33m[m Update README.md [32m(11 months ago) [1;34m<吳宗達>[m
+* [31mc563fa7[m -[33m[m Create README.md [32m(11 months ago) [1;34m<吳宗達>[m
+* [31m3cf4f39[m -[33m[m add some algorithm [32m(11 months ago) [1;34m<cthbst>[m
+* [31md25a703[m -[33m[m split codebook.txt to codebook.tex & content.tex [32m(11 months ago) [1;34m<cthbst>[m
+* [31m9f5a532[m -[33m[m codebook add bashrc && 2016 ACM Chung-Li add picture [32m(12 months ago) [1;34m<cthbst>[m
+* [31m8e2f8f9[m -[33m[m Upload Chung li 2016 [32m(12 months ago) [1;34m<Yuxin Zhou>[m
+*   [31m70e942e[m -[33m[m Updated. [32m(12 months ago) [1;34m<Yuxin Zhou>[m
+[32m|[m[33m\[m  
+[32m|[m * [31me58c4fe[m -[33m[m KM mincostmaxflow [32m(12 months ago) [1;34m<cthbst>[m
+[32m|[m * [31m0e9ff5f[m -[33m[m Create KM [32m(12 months ago) [1;34m<Yuxin Zhou>[m
+[32m|[m * [31m2b6c180[m -[33m[m Create Min Cost Max Flow [32m(12 months ago) [1;34m<Yuxin Zhou>[m
+[32m|[m * [31m8fda2f4[m -[33m[m Smallest Circle [32m(12 months ago) [1;34m<cthbst>[m
+[32m|[m * [31me6ecea8[m -[33m[m dinic add init [32m(12 months ago) [1;34m<cthbst>[m
+[32m|[m * [31m1f22aa8[m -[33m[m add 2D point [32m(12 months ago) [1;34m<cthbst>[m
+[32m|[m * [31m7a58d71[m -[33m[m PTC1611 [32m(12 months ago) [1;34m<cthbst>[m
+[32m|[m * [31m9602a49[m -[33m[m codebook add auto timetag [32m(1 year ago) [1;34m<cthbst>[m
+[32m|[m * [31mb3f1c09[m -[33m[m modify Linear Prime [32m(1 year ago) [1;34m<cthbst>[m
+[32m|[m * [31mb2019ca[m -[33m[m edit vimrc [32m(1 year ago) [1;34m<cthbst>[m
+[32m|[m * [31m35c5dd1[m -[33m[m add contest TOPC 2016 [32m(1 year ago) [1;34m<cthbst>[m
+[32m|[m * [31mad9b32f[m -[33m[m Game Paper [32m(1 year, 1 month ago) [1;34m<Yuxin Zhou>[m
+[32m|[m * [31ma00ae37[m -[33m[m Create README.md [32m(1 year, 1 month ago) [1;34m<Yuxin Zhou>[m
+[32m|[m * [31m79c119c[m -[33m[m Update README.md [32m(1 year, 1 month ago) [1;34m<吳宗達>[m
+[32m|[m * [31m8a98839[m -[33m[m edit codebook [32m(1 year, 1 month ago) [1;34m<cthbst>[m
+[32m|[m * [31mafeeafb[m -[33m[m add sb [32m(1 year, 1 month ago) [1;34m<cthbst>[m
+[32m|[m * [31m86c1421[m -[33m[m add NCPC 2016 [32m(1 year, 1 month ago) [1;34m<cthbst>[m
+[32m|[m * [31mf84e365[m -[33m[m edit path [32m(1 year, 1 month ago) [1;34m<cthbst>[m
+* [33m|[m [31m16255e8[m -[33m[m Update Codebook [32m(12 months ago) [1;34m<Yuxin Zhou>[m
+[33m|[m[33m/[m  
+* [31m175bb10[m -[33m[m Add Random Func [32m(1 year, 1 month ago) [1;34m<Yuxin Zhou>[m
+* [31m07a26bb[m -[33m[m Add Some Algos [32m(1 year, 1 month ago) [1;34m<Yuxin Zhou>[m
+* [31mfd6682b[m -[33m[m Update Some Algorithm [32m(1 year, 1 month ago) [1;34m<Yuxin Zhou>[m
+* [31m1690053[m -[33m[m add Euler Circuit [32m(1 year, 1 month ago) [1;34m<cthbst>[m
+* [31m752d5f6[m -[33m[m edit codebook [32m(1 year, 1 month ago) [1;34m<cthbst>[m
+* [31m1ff14d2[m -[33m[m edit codebook [32m(1 year, 1 month ago) [1;34m<cthbst>[m
+* [31m4c65015[m -[33m[m  add Hash & ConvexHull [32m(1 year, 1 month ago) [1;34m<cthbst>[m
+*   [31m107930c[m -[33m[m Merge branch 'master' of https://github.com/yqkqknct/NCTU_Tmprry [32m(1 year, 2 months ago) [1;34m<cthbst>[m
+[34m|[m[35m\[m  
+[34m|[m * [31m1de3a2b[m -[33m[m Update README for contest today [32m(1 year, 2 months ago) [1;34m<Yuxin Zhou>[m
+[34m|[m * [31m047e471[m -[33m[m NCTU NEW STUDENT CONTEST 2016 09 10 [32m(1 year, 2 months ago) [1;34m<Yuxin Zhou>[m
+* [35m|[m [31m90ec718[m -[33m[m add PTC1609/ [32m(1 year, 2 months ago) [1;34m<cthbst>[m
+[35m|[m[35m/[m  
+* [31m8cdab83[m -[33m[m fix bug [32m(1 year, 2 months ago) [1;34m<cthbst>[m
+* [31m06961f3[m -[33m[m fix bug [32m(1 year, 2 months ago) [1;34m<cthbst>[m
+* [31m4f3e6a9[m -[33m[m 2016 NCTU Annual Programming Contest [32m(1 year, 2 months ago) [1;34m<cthbst>[m
+* [31m485e9e0[m -[33m[m add fft [32m(1 year, 2 months ago) [1;34m<cthbst>[m
+* [31m65ce771[m -[33m[m add vimrc [32m(1 year, 2 months ago) [1;34m<cthbst>[m
+* [31m6d60610[m -[33m[m add SCC [32m(1 year, 2 months ago) [1;34m<cthbst>[m
+* [31m18b29e3[m -[33m[m add ax+by=gcd(a,b) [32m(1 year, 2 months ago) [1;34m<cthbst>[m
+* [31m107aee4[m -[33m[m add Treap [32m(1 year, 2 months ago) [1;34m<cthbst>[m
+* [31m97a9b54[m -[33m[m add Treap [32m(1 year, 2 months ago) [1;34m<cthbst>[m
+* [31m9f7a6f3[m -[33m[m modify codebook [32m(1 year, 2 months ago) [1;34m<cthbst>[m
+* [31mdddab40[m -[33m[m Delete codebook.log [32m(1 year, 2 months ago) [1;34m<吳宗達>[m
+* [31m3ffef5d[m -[33m[m codebook first time compile success [32m(1 year, 2 months ago) [1;34m<cthbst>[m
+* [31mc7561bc[m -[33m[m Delete .codebook.tex.swp [32m(1 year, 2 months ago) [1;34m<吳宗達>[m
+* [31mefa4382[m -[33m[m modify dinic [32m(1 year, 3 months ago) [1;34m<cthbst>[m
+* [31m4e7c245[m -[33m[m add dinic.cpp [32m(1 year, 3 months ago) [1;34m<cthbst>[m
+* [31m49ceef5[m -[33m[m 立人校內賽 add cthbst's solution [32m(1 year, 3 months ago) [1;34m<cthbst>[m
+* [31m114efd4[m -[33m[m rename files [32m(1 year, 3 months ago) [1;34m<cthbst>[m
+*   [31m774ab16[m -[33m[m Fix git push error [32m(1 year, 3 months ago) [1;34m<Yuxin Zhou>[m
+[36m|[m[1;31m\[m  
+[36m|[m * [31mf4cf4ab[m -[33m[m add I/O optimization [32m(1 year, 3 months ago) [1;34m<cthbst>[m
+[36m|[m * [31me72b6c2[m -[33m[m add Miller-Rabin [32m(1 year, 3 months ago) [1;34m<cthbst>[m
+[36m|[m * [31ma82a6d1[m -[33m[m add Bigint [32m(1 year, 3 months ago) [1;34m<cthbst>[m
+[36m|[m * [31m71e6e74[m -[33m[m modify PTC1608 README [32m(1 year, 3 months ago) [1;34m<cthbst>[m
+[36m|[m * [31m5c46c2a[m -[33m[m add PTC1608 2.cpp [32m(1 year, 3 months ago) [1;34m<cthbst>[m
+[36m|[m * [31m0f86f26[m -[33m[m rename [32m(1 year, 3 months ago) [1;34m<cthbst>[m
+* [1;31m|[m [31m63c0bce[m -[33m[m Upload LZSHPC-Public [32m(1 year, 3 months ago) [1;34m<Yuxin Zhou>[m
+* [1;31m|[m [31m09f323f[m -[33m[m Create GitIgnore File [32m(1 year, 3 months ago) [1;34m<Yuxin Zhou>[m
+[1;31m|[m[1;31m/[m  
+*   [31md595d5a[m -[33m[m Merge 1.cpp and README [32m(1 year, 3 months ago) [1;34m<Yuxin Zhou>[m
+[1;32m|[m[1;33m\[m  
+[1;32m|[m * [31ma783e7d[m -[33m[m Update README.md [32m(1 year, 3 months ago) [1;34m<ggh93234999>[m
+[1;32m|[m * [31me0c2f40[m -[33m[m Create 1.cpp [32m(1 year, 3 months ago) [1;34m<ggh93234999>[m
+* [1;33m|[m [31m1026e36[m -[33m[m Update 3.cpp and edit README of 3.cpp [32m(1 year, 3 months ago) [1;34m<Yuxin Zhou>[m
+[1;33m|[m[1;33m/[m  
+* [31me719769[m -[33m[m PTC - 20160810 Initialization [32m(1 year, 3 months ago) [1;34m<Yuxin Zhou>[m
+* [31m5f5d088[m -[33m[m Add Disjoint Set [32m(1 year, 3 months ago) [1;34m<Yuxin Zhou>[m
+* [31m7777c33[m -[33m[m Delete Old Dir [32m(1 year, 3 months ago) [1;34m<Yuxin Zhou>[m
+* [31m70ee458[m -[33m[m Update Dir Name [32m(1 year, 3 months ago) [1;34m<Yuxin Zhou>[m
+* [31mcadf666[m -[33m[m modify codebook README [32m(1 year, 3 months ago) [1;34m<cthbst>[m
+* [31m164c2dd[m -[33m[m modify codebook README [32m(1 year, 3 months ago) [1;34m<cthbst>[m
+* [31m918b1b9[m -[33m[m modify codebook > README [32m(1 year, 3 months ago) [1;34m<cthbst>[m
+*   [31mfcd84a2[m -[33m[m Merge pull request #1 from cthbst/patch-1 [32m(1 year, 3 months ago) [1;34m<吳宗達>[m
+[1;34m|[m[1;35m\[m  
+[1;34m|[m * [31m17fa2cf[m -[33m[m Create KMP.h [32m(1 year, 3 months ago) [1;34m<吳宗達>[m
+* [1;35m|[m   [31m5441738[m -[33m[m Merge pull request #2 from cthbst/master [32m(1 year, 3 months ago) [1;34m<吳宗達>[m
+[1;36m|[m[31m\[m [1;35m\[m  
+[1;36m|[m * [1;35m|[m [31m735b06f[m -[33m[m Create SparseTable.h [32m(1 year, 3 months ago) [1;34m<吳宗達>[m
+[1;36m|[m [1;35m|[m[1;35m/[m  
+* [1;35m|[m [31m1f967e5[m -[33m[m Create LCA.cpp [32m(1 year, 3 months ago) [1;34m<ggh93234999>[m
+[1;35m|[m[1;35m/[m  
+* [31m2acd4b4[m -[33m[m Initialize disjoint set. [32m(1 year, 4 months ago) [1;34m<Yuxin Zhou>[m
+* [31m7f53fb4[m -[33m[m Update README [32m(1 year, 4 months ago) [1;34m<Yuxin Zhou>[m
+* [31ma3f0539[m -[33m[m Update README.md [32m(1 year, 4 months ago) [1;34m<ggh93234999>[m
+* [31mc98647f[m -[33m[m Add codebook directory. [32m(1 year, 5 months ago) [1;34m<Yuxin Zhou>[m
+* [31m15923e7[m -[33m[m Initial commit [32m(1 year, 5 months ago) [1;34m<Yuxin Zhou>[m

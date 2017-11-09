@@ -1,4 +1,4 @@
-set nu ai si cin ts=4 sw=4 sts=4
+set nu ai si cin ts=4 sw=4 sts=4 expandtab
 
 nmap #2 :! gedit %<.in %<*.in &<CR>
 nmap #4 :! date > %<.pt; cat -n % > %<.pt; lpr %<.pt <CR>
