@@ -31,5 +31,25 @@ then    g(n) = ∑_{d|n} u(n/d)f(d)
 the number/power of gcd(i, j) = k
 - Trick
 分塊, O(sqrt(n))
+-------------------------------------------------------
+Chinese Remainder Theorem (m_i 兩兩互質)
+
+  x = a_1 (mod m_1)
+  x = a_2 (mod m_2)
+  ....
+  x = a_i (mod m_i)
+
+construct a solution:
+
+  Let M = m_1 * m_2 * m_3 * ... * m_n
+  Let M_i = M / m_i
+
+  t_i = 1 / M_i
+  t_i * M_i = 1 (mod m_i)
+
+  solution x = a_1 * t_1 * M_1 + a_2 * t_2 * M_2 + ... + a_n * t_n * M_n + k * M
+  = k*M + ∑ a_i * t_i * M_i, k is positive integer.
+
+  under mod M, there is one solution x = ∑ a_i * t_i * M_i
 
 */
