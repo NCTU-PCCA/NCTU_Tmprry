@@ -1,4 +1,4 @@
-
+// long long version
 typedef pair<long long, long long> pll;
 struct CostFlow {
     static const int MAXN = 350;

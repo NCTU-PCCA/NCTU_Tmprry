@@ -1,5 +1,5 @@
+// Minimum Weight Perfect Matching (Perfect Match)
 
-// Minimum General Weighted Matching (Perfect Match)
 struct Graph {
     static const int MAXN = 105;
     int n, e[MAXN][MAXN];

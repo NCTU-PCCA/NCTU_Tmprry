@@ -1,21 +1,62 @@
-// 只能拿一次的點都要在點上加上 cap 1
+(a) Bounded Maxflow Construction:
+1. add two node ss, tt
+2. add_edge(ss, tt, INF)
+3. for each edge u -> v with capacity [l, r]:
+        add_edge(u, tt, l)
+        add_edge(ss, v, l)
+        add_edge(u, v, r-l)
+4. see (b), check if it is possible.
+5. answer is maxflow(ss, tt) + maxflow(s, t)
+-------------------------------------------------------
+(b) Bounded Possible Flow:
+1. same construction method as (a)
+2. run maxflow(ss, tt)
+3. for every edge connected with ss or tt:
+        rule: check if their rest flow is exactly 0
+4. answer is possible if every edge do satisfy the rule;
+5. otherwise, it is NOT possible.
+-------------------------------------------------------
+(c) Bounded Minimum Flow:
+1. same construction method as (a)
+2. answer is maxflow(ss, tt)
+-------------------------------------------------------
+(d) Bounded Minimum Cost Flow:
+* the concept is somewhat like bounded possible flow.
+1. same construction method as (a)
+2. answer is maxflow(ss, tt) + (∑ l * cost for every edge)
+-------------------------------------------------------
+(e) Minimum Cut: 
+1. run maxflow(s, t)
+2. run cut(s)
+3. ss[i] = 1: node i is at the same side with s.
+-------------------------------------------------------
 
 const long long INF = 1LL<<60;
-struct Dinic {  //O(VVE)
-    static const int MAXV = 5003;
+struct Dinic {  //O(VVE), with minimum cut 
+    static const int MAXN = 5003;
     struct Edge{
         int u, v;
         long long cap, rest;
     };
 
-    int n, m, s, t, d[MAXV], cur[MAXV];
+    int n, m, s, t, d[MAXN], cur[MAXN];
     vector<Edge> edges;
-    vector<int> G[MAXV];
+    vector<int> G[MAXN];
 
     void init(){
         edges.clear();
-        for ( int i = 0 ; i < MAXV ; i++ ) G[i].clear();
+        for ( int i = 0 ; i < MAXN ; i++ ) G[i].clear();
     }
+
+    // min cut start
+    bool side[MAXN];
+    void cut(int u) {
+        side[u] = 1;
+        for ( int i : G[u] ) {
+            if ( !side[ edges[i].v ] && edges[i].rest ) cut(edges[i].v);
+        } 
+    }
+    // min cut end
 
     void add_edge(int u, int v, long long cap){
         edges.push_back( {u, v, cap, cap} );
@@ -70,4 +111,3 @@ struct Dinic {  //O(VVE)
         return flow;
     }
 } dinic;
-

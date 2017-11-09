@@ -1,67 +1,19 @@
-Independent Set:
-
-無向圖上，選定數點，互不相鄰，稱作「獨立集」。
-各點之間不相鄰，換到補圖上面就是，各點之間都有邊。原圖的 Clique ，就是補圖的 Independent Set ；原圖的 Independent Set ，就是補圖的 Clique 。
-
-Maximum Independent Set [NP-complete]
-無向圖上，點數最多的Maximum Independent Set。
-
-Maximum Independent Set in Tree [P]
-當給定的圖是樹，得利用Greedy Method求解。
-
-Maximum Independent Set in Bipartite Graph [P]
-當給定的圖是二分圖，得利用Maximum Cardinality Bipartite Matching求解。
-
-===
-
-Dominating Set
-無向圖上，選定數點，其餘點皆與之相鄰，稱作「支配集」。
-
-Minimum Dominating Set [NP-complete]
-無向圖上點數最少的Dominating Set。
-
-Minimum Dominating Set in Tree [P]
-當給定的圖是樹，得利用DP求解。
-
-Minimum Dominating Set in Bipartite Graph [NP-complete]
-當給定的圖是二分圖。
-
-==
-
-independent set
-獨立集。選出一些點，互不相鄰。最佳化問題是越多越好。
-dominating set
-支配集。選出一些點，其餘點皆與之相鄰。最佳化問題是越少越好。
-
-==
-
-Vertex Cover
-
-一張無向圖上，挑選數個點，碰觸到所有邊，這些點就叫做一個「點覆蓋」，可能有許多種。換句話說，每一條邊，都會碰觸到一個以上的選定點。
-
-Minimum Vertex Cover [NP-complete]
-一張圖上點數最少的Vertex Cover。
-
-Minimum Vertex Cover in Tree [P]
-當給定的圖是樹，得利用Greedy演算法，從樹葉往樹根方向選出節點。
-
-Minimum Vertex Cover in Bipartite Graph [P]
-當給定的圖是二分圖，得化作Maximum Cardinality Bipartite Matching解決。
-
-
-==
-
-Edge Cover
-
-一張無向圖上，挑選數條邊，碰觸到所有點，這些邊就叫做一個「邊覆蓋」，可能有許多種。
-
-Minimum Edge Cover [P]
-一張圖上邊數最少的Edge Cover。
-得化作Maximum Matching解決。
-
-Minimum Edge Cover in Bipartite Graph [P]
-當給定的圖是二分圖，得利用Greedy演算法，優先覆蓋degree最小的點。
-
-Minimum/Maximum Weight Edge Cover [P]
-一張圖上權重最小（大）的Edge Cover。
-得化作Minimum/Minimum Weight Matching解決。【待補文字】
+Maximum Independent Set
+General: [NPC] maximum clique of complement of G
+Tree: [P] Greedy
+Bipartite Graph: [P] Maximum Cardinality Bipartite Matching
+-------------------------------------------------------
+Minimum Dominating Set
+General: [NPC]
+Tree: [P] DP
+Bipartite Graph: [NPC]
+-------------------------------------------------------
+Minimum Vertex Cover
+General: [NPC] (?)maximum clique of complement of G 
+Tree: [P] Greedy, from leaf to root
+Bipartite Graph: [P] Maximum Cardinality Bipartite Matching
+-------------------------------------------------------
+Minimum Edge Cover
+General: [P] V - Maximum Matching
+Bipartite Graph: [P] Greedy, strategy: cover small degree node first.
+(Min/Max)Weighted: [P]: Minimum/Minimum Weight Matching
