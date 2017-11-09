@@ -1,3 +1,8 @@
+
+/*高度数组： 是一个一维数组，保存了在后缀数组中相邻两个后缀的最长公共前缀（Longest Common Prefix，LCP）长度
+ *SA[i] 表示的是字典序排名为 ii 的后缀是谁（字典序越小的排名越靠前）
+ *rank[i] 表示的是后缀 i 所对应的排名是多少  */
+
 const int MAX = 1020304;
 int ct[MAX], he[MAX], rk[MAX];
 int sa[MAX], tsa[MAX], tp[MAX][2];
