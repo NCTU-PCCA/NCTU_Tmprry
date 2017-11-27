@@ -1,10 +1,13 @@
 # NCTU_Tmprry
 
-![p1](./contest/NCPC2016/p1.jpg)
+![p1](./contest/ACM-ICPC\ Hua-Lien\ 2017/p1.jpg)
 
 # Award
 
 ### 2017
+- [ACM-ICPC 臺灣賽區](https://icpc.baylor.edu/regionals/finder/hua-lien-2017) Rank: 10, 銀牌獎
+- [ACM-ICPC 印尼賽區](https://icpc.baylor.edu/regionals/finder/jakarta-2017) Rank: 13, Thirteenth Place
+- [NCPC](http://ncpc.nsysu.edu.tw/bin/home.php) Rank: 11
 - 交大年度賽 Rank: 4, 佳作
 - [TOPC](https://icpc.baylor.edu/regionals/finder/hua-lien-online-2017) Rank: 4, Gold, Second Place
 - [ITSA 桂冠賽](http://algorithm.csie.ncku.edu.tw/ITSAcontest/ITSA2017/) Rank: 5, 佳作
