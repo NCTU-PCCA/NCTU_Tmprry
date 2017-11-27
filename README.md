@@ -1,6 +1,6 @@
 # NCTU_Tmprry
 
-![p1](./contest/ACM-ICPC Hua-Lien 2017/p1.jpg)
+![p1](https://raw.githubusercontent.com/NCTU-PCCA/NCTU_Tmprry/master/contest/ACM-ICPC%20Hua-Lien%202017/p1.jpg)
 
 # Award
 
