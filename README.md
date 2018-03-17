@@ -2,6 +2,11 @@
 
 ![p1](https://raw.githubusercontent.com/NCTU-PCCA/NCTU_Tmprry/master/contest/ACM-ICPC%20Hua-Lien%202017/p1.jpg)
 
+# Member
+- [吳宗達(cthbst)](https://www.facebook.com/cthbst)
+- [林翔(ggh93234999)](https://www.facebook.com/profile.php?id=100000809034086)
+- [周玉鑫(yqkqknct)](https://www.facebook.com/yqkqknct)
+
 # Award
 
 ### 2017
